@@ -1,0 +1,668 @@
+/**
+ * @version 1.0
+ * @package: Admin Panel
+ * @category: Admin UI
+ * @author wpdevelop
+ *
+ * @web-site https://wpbookingcalendar.com/
+ * @email info@wpbookingcalendar.com 
+ * 
+ * @modified 2016-01-10
+ */
+
+ /* M o d a l s  **************************************************************/
+.wpdevelop .modal.wpbc_popup_modal {
+     z-index: 50000;
+ }
+.wpdevelop .modal-header {
+    background: none repeat scroll 0 0 #F5F5F5;
+    text-shadow: 0 0 2px #FFF;
+}
+ 
+ /* Payment request Modal */
+#wpbc_payment_request_modal .modal-header h3 {
+    color: #333;
+}
+#wpbc_payment_request_modal .modal-body textarea {
+    width: 100%;
+}
+
+/* Print Loyout Modal */
+#wpbc_print_modal .modal-header {
+    background: none repeat scroll 0 0 #F5F5F5;
+    text-shadow: 0 0 2px #FFF;
+}
+#wpbc_print_modal .modal-header h3 {
+    color: #333;
+}
+#wpbc_print_modal .modal-header {
+    text-shadow: none;
+}
+
+/* Modal Google Calendar Events Import */
+.wpbc_modal__import_google_calendar__section span.description {
+    display:none;
+}
+.wpbc_modal__import_google_calendar__section #booking_gcal_events_until,
+.wpbc_modal__import_google_calendar__section .booking_gcal_events_until_offset,
+.wpbc_modal__import_google_calendar__section #booking_gcal_events_from,
+.wpbc_modal__import_google_calendar__section .booking_gcal_events_from_offset {
+    float:left;
+    margin:5px 0 0 0 !important;
+}
+.wpbc_modal__import_google_calendar__section .booking_gcal_events_from_offset label,
+.wpbc_modal__import_google_calendar__section .booking_gcal_events_until_offset label {
+    margin: 0 10px;
+    float:left;
+    line-height: 29px;
+}
+.wpbc_modal__import_google_calendar__section input[type=text],
+.wpbc_modal__import_google_calendar__section select {
+    height:28px;
+}
+.wpbc_modal__import_google_calendar__section th {
+    vertical-align: middle;
+}
+.wpbc_modal__import_google_calendar__section th,
+.wpbc_modal__import_google_calendar__section td {
+    border:none;
+}
+.wpbc_modal__import_google_calendar__section label {
+    line-height: 28px;
+    margin: 0;
+    vertical-align: middle;
+}
+.wpbc_modal__import_google_calendar__section #booking_gcal_events_from_offset_type,
+.wpbc_modal__import_google_calendar__section #booking_gcal_events_until_offset_type {
+    vertical-align: initial;
+}
+
+
+@media (max-width: 782px) { 
+    .wpdevelop .modal-dialog{
+        margin: 60px 10px 10px;
+    }
+    
+    /* Import Google Events Dialog*/
+    .wpbc_modal__import_google_calendar__section .modal-dialog.modal-lg {
+        width: auto;
+    }
+    .wpbc_modal__import_google_calendar__section label{
+        font-weight: 600;
+        font-size: 1.1em;
+        width:100%;
+        display:block;
+        float:none;
+    }    
+    .wpbc_modal__import_google_calendar__section input[type=text],
+    .wpbc_modal__import_google_calendar__section select {
+        display:block;
+        width:100%;
+        clear:both;
+        height:34px;
+        float:none !important;
+    }
+    .wpbc_modal__import_google_calendar__section th,
+    .wpbc_modal__import_google_calendar__section td {
+        display:block;
+        padding:0;
+    }
+    .wpbc_modal__import_google_calendar__section td {
+        margin-bottom: 15px;
+    }
+    .wpbc_modal__import_google_calendar__section #booking_gcal_events_until,
+    .wpbc_modal__import_google_calendar__section .booking_gcal_events_until_offset,
+    .wpbc_modal__import_google_calendar__section #booking_gcal_events_from,
+    .wpbc_modal__import_google_calendar__section .booking_gcal_events_from_offset {
+        float:none;
+        margin:0 !important;
+    }
+    .wpbc_modal__import_google_calendar__section .booking_gcal_events_from_offset label,
+    .wpbc_modal__import_google_calendar__section .booking_gcal_events_until_offset label {
+        float:none;
+        margin:10px 0 0!important;
+    }
+    .wpbc_modal__import_google_calendar__section #booking_gcal_events_from_offset,
+    .wpbc_modal__import_google_calendar__section #booking_gcal_events_from_offset_type,
+    .wpbc_modal__import_google_calendar__section #booking_gcal_events_until_offset,
+    .wpbc_modal__import_google_calendar__section #booking_gcal_events_until_offset_type {
+        width:100% !important;
+        float:none;
+    }
+    .wpbc_modal__import_google_calendar__section .booking_gcal_events_from_offset > span.wpbc_offset_value select,
+    .wpbc_modal__import_google_calendar__section .booking_gcal_events_until_offset > span.wpbc_offset_value select {
+        margin-top:10px !important;
+    }
+    
+    /* M o d a l     TinyMCE      t o o l b a r    ****************************/
+    #wpbc_tiny_modal .form-table td input[type='text'],
+    #wpbc_tiny_modal .form-table td select {
+        height: 40px;
+        font-size: 16px;
+        min-width: Min(10em,100%);
+    }
+
+    /*
+    #wpbc_tiny_modal .wpdvlp-top-tabs .nav-tab {
+        -moz-border-radius:0;
+        -webkit-border-radius:0;
+        border-radius:0;
+        border: 1px solid #cccccc;
+        padding: 10px;
+        width: 100%;
+    } */
+}
+/* Fix position of modal window,  that depend from sidebar in admin panel */
+@media (min-width: 992px) and (max-width: 1300px) {
+    .wpdevelop .modal-dialog {
+        margin: 30px 170px auto;
+    }
+    .wpdevelop .modal-dialog.modal-lg {
+        width: 815px;
+    }
+    .wpbc_modal__import_google_calendar__section th {
+        width:140px;
+    }
+}
+
+/* M o d a l     TinyMCE      t o o l b a r    ****************************************/
+
+#wpbc_tiny_modal .modal-dialog.modal-lg {
+    width:94%;
+}
+/* Scrollbar for modal */
+#wpbc_tiny_modal {
+    overflow-y: auto !important;
+}
+/* this pasrt for having scrollbar inside of the modal window with  fixed height */
+#wpbc_tiny_modal_NO .modal-dialog{
+    overflow-y: initial !important;
+}
+#wpbc_tiny_modal_NO .modal-body{
+    height: 250px;
+    overflow-y: auto;
+}
+.wp-admin .modal-backdrop {
+    background-color: #000000;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1040;
+}
+.wp-admin .modal-backdrop.fade {
+    opacity: 0;
+}
+.wp-admin .modal-backdrop.in {
+    opacity: 0.5;
+}
+#wpbc_tiny_modal strong,
+#wpbc_tiny_modal label {
+    font-weight: 600;
+}
+.form-table td fieldset label.wpbc-form-radio{
+    margin: 0 0 5px !important;
+}
+#wpbc_tiny_modal .form-table th {
+    font-weight: 600;
+    line-height: 1.3;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 10px;
+    padding-top: 10px;
+    vertical-align: top;
+    width: 200px;
+}
+#wpbc_tiny_modal .form-table td {
+    line-height: 1.3;
+    margin-bottom: 9px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    vertical-align: middle;
+}
+/* ------------------------------------------------------------------ */
+/* Align TOGGLE with  span and label elements in popup                */
+/* ------------------------------------------------------------------ */
+#wpbc_tiny_modal th label {
+    font-weight: 600;
+    margin: 3px 0 0.5em;
+    line-height: 1.6;
+    font-size: 14px;
+}
+#wpbc_tiny_modal td fieldset{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+#wpbc_tiny_modal td fieldset .wpbc_ui__toggle {
+    flex:0;
+}
+#wpbc_tiny_modal td fieldset span.description {
+    flex: 1;
+    margin: 3px 0 0.5em;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 14px;
+}
+#wpbc_tiny_modal td fieldset input[type='text'],
+#wpbc_tiny_modal td fieldset select {
+    margin: 3px 0.5em 0.5em 0;
+}
+#wpbc_tiny_modal .bookingother_wpbc_shortcode_type_other_shortcodes td fieldset{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 4px;
+}
+/* ------------------------------------------------------------------ */
+#wpbc_tiny_modal .modal-footer a.button, 
+#wpbc_tiny_modal .modal-footer a.button:hover,
+#wpbc_tiny_modal .modal-footer a.button:active,
+#wpbc_tiny_modal .modal-footer a.button:focus {
+    text-decoration: none;
+    outline: 0;
+}
+#wpbc_tiny_modal .wpbc_expand_section_link,
+#wpbc_tiny_modal a.wpbc_expand_section_link:hover,
+#wpbc_tiny_modal a.wpbc_expand_section_link:focus {
+    color:#21759b;
+    cursor: pointer;
+    outline: 0;
+    border:none;
+    border-bottom:1px dashed #21759B;
+    text-decoration: none;      
+}
+#wpbc_tiny_modal .booking_advanced_section, 
+#wpbc_tiny_modal .bookingcalendar_advanced_section, 
+#wpbc_tiny_modal .bookingselect_advanced_section, 
+#wpbc_tiny_modal .bookingtimeline_advanced_section0{
+    display:none;
+}
+#wpbc_tiny_modal .put-in {
+    cursor: pointer;
+    font-weight: 600;
+    background: none repeat scroll 0 0 #E9E9E9;
+    border: 1px solid #BBBBBB;
+    width:100%;
+}
+#wpbc_tiny_modal input[type="checkbox"],  
+#wpbc_tiny_modal input[type="radio"] {
+    margin: 0 10px 2px 0;
+    vertical-align: middle;
+    outline: 0;
+}
+#wpbc_tiny_modal .wpbc_sub_settings_grayed {
+    background-color: #f3f3f3;
+}
+#wpbc_tiny_modal .wpbc_sub_settings_grayed th {
+    padding: 10px 0px 10px 12px;
+}
+/* Placeholders */
+#wpbc_tiny_modal ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #999;
+}
+#wpbc_tiny_modal ::-moz-placeholder { /* Firefox 19+ */
+  color: #999;
+}
+#wpbc_tiny_modal :-ms-input-placeholder { /* IE 10+ */
+  color: #999;
+}
+#wpbc_tiny_modal :-moz-placeholder {
+   color: #999;
+}
+#wpbc_tiny_modal .bookingsearch_search_results{
+    display:none;
+}
+#wpbc_tiny_modal .bookingsearch_search_form.wpbc_sub_settings_grayed{
+    display:none;
+}
+/*#wpbc_tiny_modal .wpbc_shortcode_bookingresource {*/
+/*    display:none;*/
+/*}*/
+#wpbc_tiny_modal select option:disabled {
+       color: #ccc;
+       display: none;
+}
+/* FixIn: 7.1.2.7 */
+@media (max-width: 782px) { 
+    .wp-admin .modal-backdrop.in {
+        display:none;
+    }
+}
+
+/* == 2024-01-20 ==================================================================================================== */
+
+/* Navigation tabs fix */
+body[class*='page_wpbc-resources'] #wpbc_tiny_modal .wpdvlp-top-tabs .nav-tabs ,
+.modal-body .wpbc_settings_flex_container .wpdvlp-top-tabs .nav-tabs {
+    border:none;
+    border-bottom:1px solid #d6d6d6;
+}
+/* Header and Body */
+.wpdevelop .modal-header {
+  background: #FFF;
+  text-shadow: none;
+}
+.wpdevelop .modal-body {
+  position: relative;
+  padding: 15px;
+  background: #f5f5f5;
+}
+/* SIZE */
+#wpbc_tiny_modal .modal-dialog.modal-lg {
+    width: 80%;
+        width: 98%;
+        margin: 5px auto;
+}
+@media (max-width: 782px) {
+    #wpbc_tiny_modal .modal-dialog.modal-lg {
+        width: 97%;
+    }
+}
+/* Show over top toolbar - dashboard*/
+#wpbc_tiny_modal {
+    z-index: 1000000;
+}
+/* Header border radius*/
+#wpbc_tiny_modal .modal-dialog.modal-lg .modal-header {
+    border-radius: 6px 6px 0 0;
+}
+/* Shortcode Text  field */
+#wpbc_tiny_modal .put-in {
+    cursor: text;
+    font-weight: 600;
+  /*background: #1E7BC7;*/
+  /*background: #4A8CC2;*/
+  /*border: 1px solid #3C86A7;*/
+    background: #75A249;
+    border: 1px solid #75A249;
+    width: 100%;
+    font-size: 15px;
+    color: #FFF;
+    /*color: #2e3d20;*/
+    line-height: 2;
+    vertical-align: middle;
+    padding: 0 1em 3px;
+    box-shadow:none !important;
+    margin: 20px 0 5px;
+}
+/* Border color of active horizontal tab */
+.modal-body .wpbc_settings_flex_container .wpdvlp-top-tabs .nav-tab-active,
+.modal-body .wpbc_settings_flex_container .wpdvlp-top-tabs a.nav-tab-active:hover {
+    border-bottom-color: #9c9c9c;
+    border-bottom-color: #cb8c8c;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Vertical Navigation Panel                                                                                          */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.wpbc_shortcode_config_navigation_column.wpbc_settings_navigation_column .wpbc_settings_navigation_item a {
+    font-size: 15px;
+    text-transform: none;
+}
+.wpbc_shortcode_config_navigation_column.wpbc_settings_navigation_column .wpbc_settings_navigation_item.wpbc_settings_navigation_item_disabled a{
+    color: #ccc;
+}
+.wpbc_shortcode_config_navigation_column.wpbc_settings_navigation_column .wpbc_settings_navigation_item:last-child a {
+    border-top:none;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Content Container                                                                                                  */
+/* ------------------------------------------------------------------------------------------------------------------ */
+/*
+.wpbc_sc_container__all_shortcodes                                                                                      <!-- All Shortcodes     -->
+    #wpbc_sc_container__shortcode_booking  .wpbc_sc_container__shortcode  .wpbc_sc_container__shortcode_booking         <!-- Booking shortcode  -->
+        .wpdvlp-top-tabs                                                                                                <!-- TOP NAV -->
+        .wpbc_sc_container__shortcode_section  .wpbc_sc_container__shortcode_section__general                           <!-- Section Content General (depend from  TOP NAV) -->
+
+*/
+.wpbc_sc_container__all_shortcodes {
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 0 12px 12px;
+    margin: 0;
+}
+    .wpbc_sc_container__all_shortcodes .wpbc_sc_container__shortcode .wpdvlp-tabs-wrapper{
+        height: auto;
+        margin-top: 1px;
+    }
+    /* Hide all  sections by  default*/
+    .wpbc_sc_container__all_shortcodes .wpbc_sc_container__shortcode {
+        display: none;
+    }
+    /* Default 1st section  visible */
+    .wpbc_sc_container__all_shortcodes .wpbc_sc_container__shortcode_booking {
+        display: block;
+    }
+        /* Hide all  sections by  default*/
+        .wpbc_sc_container__shortcode_section{
+            display:none;
+        }
+        /* Default 1st section  visible */
+        .wpbc_sc_container__shortcode_section__general {
+            display:block;
+        }
+            /* Hide all  sections by  default*/
+            .wpbc_sc_container__shortcode_subsection{
+                display:none;
+            }
+            /* Default 1st section  visible */
+            .wpbc_sc_container__shortcode_subsection__weekdays_conditions{
+                display:block;
+            }
+
+/* Sub top menu line */
+.wpbc_sc_container__shortcode_section .wpdvlp-sub-tabs .nav-tabs .nav-tab{
+    margin: 0;
+}
+.wpbc_sc_container__shortcode_section .wpdvlp-sub-tabs {
+    padding: 1px 5px 1px 0px;
+}
+.wpbc_sc_container__shortcode_section .wpdvlp-sub-tabs .nav-tabs .nav-tab {
+    border-right: 1px solid #d8d8d8;
+    background: none;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* ...                                                                                                  */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+.wpbc_shortcode_config_content_toolbar_next_prior {
+    flex:1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 10px;
+}
+.wpbc_settings_flex_container .wpbc_shortcode_config_content_toolbar_next_prior a {
+    flex:0 1 auto;
+    margin: 0 1em;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Footer Toolbar Containers                                                                                                  */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.wpbc_shortcode_config_content_toolbar__container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.wpbc_shortcode_config_content_toolbar__next_prior {
+    margin-top: 20px;
+    border-top: 1px solid #dcdcdc;
+    padding: 8px 0 0;
+}
+.wpbc_shortcode_config_content_toolbar__next_prior a.button{
+    margin:5px 8px 5px 0;
+}
+.wpbc_shortcode_config_content_toolbar__next_prior a.button .in-button-text{
+    font-size: 28px;
+    line-height: 21px;
+}
+@media (max-width: 782px){
+      .wp-core-ui .wpbc_page .wpbc_shortcode_config_content_toolbar__next_prior a.button{
+        line-height: 2.5;
+        padding: 1px 14px;
+    }
+    .wpbc_shortcode_config_content_toolbar__next_prior a.button .in-button-text{
+        display: block;
+    }
+}
+.wpbc_shortcode_config_content_toolbar__container .wpbc_shortcode_config_content_toolbar__reset,
+.wpbc_shortcode_config_content_toolbar__container .wpbc_shortcode_config_content_toolbar__insert{
+    flex: 0 1 auto;
+    align-self: flex-end;
+    padding-left: 2em;
+    margin-left: auto;
+}
+.wpbc_shortcode_config_content_toolbar__container .wpbc_shortcode_config_content_toolbar__insert{
+    border-left: 1px solid #ccc;
+    margin-left: 2em;
+}
+.wpbc_shortcode_config_content_toolbar__container .wpbc_shortcode_config_content_toolbar__reset a.button,
+.wpbc_shortcode_config_content_toolbar__container .wpbc_shortcode_config_content_toolbar__insert a.button{
+    padding-left:2em;
+    padding-right:2em;
+    font-weight: 600;
+}
+        /*  2.1 Danger (Red) Button Style ----------------------------------------------------------------------------------------- */
+        .wp-core-ui .wpbc_page .button.wpbc_ui_button_danger {
+            background: #de605c;
+            border-color: #c05d5a;
+            color: #f7f7f7;
+            text-shadow: 0 0px #ba5956;
+            text-decoration: none;
+            box-shadow: 0 1px 0px #f1f1f1;
+        }
+        /* :hover, :focus  ---- */
+        .wp-core-ui .wpbc_page .button.wpbc_ui_button_danger.hover:not(.inactive),
+        .wp-core-ui .wpbc_page .button.wpbc_ui_button_danger:hover:not(.inactive),
+        .wp-core-ui .wpbc_page .button.wpbc_ui_button_danger.focus:not(.inactive),
+        .wp-core-ui .wpbc_page .button.wpbc_ui_button_danger:focus:not(.inactive) {
+            background: #e6716f;
+            border-color: #d58582;
+            color: #fdfdfd;
+            text-shadow: none;
+        }
+        /* :focus  ---- */
+        .wp-core-ui .wpbc_page .button.wpbc_ui_button_danger.focus:not(.inactive),
+        .wp-core-ui .wpbc_page .button.wpbc_ui_button_danger:focus:not(.inactive) {
+            box-shadow:0 0 0 0px #fff, 0 0 2px 1px #a4d7ff;
+        }
+        /* :active  ---- */
+        .wp-core-ui .wpbc_page .button.wpbc_ui_button_danger.active:not(.inactive),
+        .wp-core-ui .wpbc_page .button.wpbc_ui_button_danger.active:hover:not(.inactive),
+        .wp-core-ui .wpbc_page .button.wpbc_ui_button_danger.active:focus:not(.inactive),
+        .wp-core-ui .wpbc_page .button.wpbc_ui_button_danger:active:not(.inactive) {
+            background: #ba4c48;
+            border-color: #c05d5a;
+            box-shadow: inset 0 1px 7px -3px rgba(0, 0, 0, .1);
+            color: #f3f2f2;
+        }
+        /* :disabled  ---- */
+        .wp-core-ui .wpbc_page .button.wpbc_ui_button_danger[disabled],
+        .wp-core-ui .wpbc_page .button.wpbc_ui_button_danger:disabled,
+        .wp-core-ui .wpbc_page .button.wpbc_ui_button_danger-disabled,
+        .wp-core-ui .wpbc_page .button.wpbc_ui_button_danger.disabled {
+            color: #a7aaad !important;
+            background: #f6f7f7 !important;
+            border-color: #dcdcde !important;
+            box-shadow: none !important;
+            text-shadow: none !important;
+            cursor: default;
+        }
+
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Weekdays conditions toolbar */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.wpbc_shortcode_config_fields__dates_conditions_toolbar .wpdvlp-sub-tabs{
+    border: 1px solid #dadada;
+    border-radius: 2px;
+    margin: 20px 0 10px;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Rules for OPTIONS parameter in shortcode config dialog */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.wpbc_shortcode_config__rules_container{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+    .wpbc_shortcode_config__rules__params_section{
+        flex: 0 1 auto;
+        margin-right: 5%;
+        margin-bottom:20px;
+    }
+    .wpbc_shortcode_config__rules__help_section{
+        flex: 1 1 50%;
+    }
+        /* Right Side - Help Section */
+        .wpbc_shortcode_config__rules__help_section .wpbc-settings-notice{
+            margin:0;
+            text-align:left;
+        }
+        .wpbc_shortcode_config__rules__help_section .wpbc-settings-notice.notice-header > span {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 0 10px;
+        }
+        .wpbc_shortcode_config__rules__help_section .wpbc-settings-notice.notice-list{
+            text-align: left;
+            line-height: 2em;
+            font-size: 14px;
+            padding: 0;
+        }
+        .wpbc_shortcode_config__rules__help_section .wpbc-settings-notice.notice-list ol{
+            list-style-type:disc;
+        }
+        .form-table td fieldset .wpbc_shortcode_config__rules__help_section li {
+            line-height: 2.5;
+        }
+
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Select Day - Weekday */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.wpbc_shortcode_config__rules__params_section.wpbc_select_day_weekday{
+
+}
+.wpbc_shortcode_config__rules__params_section.wpbc_select_day_weekday .ui_container_weekdays{
+    flex-flow: column wrap;
+}
+    .wpbc_shortcode_config__rules__params_section.wpbc_select_day_weekday .wpbc_ui__toggle {
+        min-width: 6em;
+    }
+    .wpbc_shortcode_config__rules__params_section.wpbc_select_day_weekday input[type="text"] {
+        width:8em;
+    }
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Start Day - Season */
+/* ------------------------------------------------------------------------------------------------------------------ */
+    .wpbc_shortcode_config__rules__params_section{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    /* Season select-box | checkboxes | buttons */
+    .wpbc_shortcode_config__rules__params_section.wpbc_start_day_season .wpbc_ajx_toolbar.wpbc_buttons_row {
+        flex: 0 1 auto;
+    }
+    /* Weekdays: Text_line | checkboxes */
+    .wpbc_shortcode_config__rules__params_section.wpbc_start_day_season .wpbc_ajx_toolbar.wpbc_buttons_row .ui_container.ui_container_weekdays{
+        flex-flow: column wrap;
+    }
+    /* Weekdays: checkboxes only */
+    .wpbc_shortcode_config__rules__params_section.wpbc_start_day_season .wpbc_ajx_toolbar.wpbc_buttons_row .ui_container.ui_container_weekdays .ui_group.ui_group_weekdays_checkboxes{
+        /*flex-flow: column wrap;*/
+        max-width: 320px;
+    }

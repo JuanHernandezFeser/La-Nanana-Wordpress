@@ -1,0 +1,448 @@
+/*
+    Document   : admin-booking resources-table
+    Created on : 2024-01-13
+    Author     : wpdevelop
+    Description: Resource FlexTable CSS 		//FixIn: 9.9.0.7
+*/
+
+/**
+ * General Structure
+ *
+ *	.wpbc_selectable_table						( .wpbc_resources_flextable  - by default exist  this CSS class for the booking resources page,  in other pages, can  be different class)
+ *		.wpbc_flextable
+ *			.wpbc_selectable_head
+ *				.wpbc_flextable_row
+ *					.wpbc_flextable_col
+ * 					...
+ *
+ *			.wpbc_selectable_body
+ *				.wpbc_flextable_row
+ *					.wpbc_flextable_col
+ * 					...
+ *
+ *			.wpbc_selectable_foot
+ *				.wpbc_flextable_row
+ *					.wpbc_flextable_col
+ * 					...
+ */
+.wpbc_flextable {
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+
+.wpbc_flextable .wpbc_selectable_head,
+.wpbc_flextable .wpbc_selectable_body,
+.wpbc_flextable .wpbc_selectable_foot {
+	flex:1 1 100%;
+
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+
+.wpbc_flextable .wpbc_flextable_row{
+	flex: 1 1 auto;
+
+	display:flex;
+	flex-flow:row wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+.wpbc_flextable .wpbc_flextable_row .wpbc_flextable_col{
+	flex: 1 1 auto;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* 1st column - Checkbox */
+.wpbc_flextable .wpbc_flextable_row .wpbc_flextable_col.wpbc_flextable_col_check{
+	flex: 0 0 25px;
+}
+.wpbc_flextable .wpbc_selectable_body .wpbc_flextable_row .wpbc_flextable_col.wpbc_flextable_col_check{
+	margin: -5px 0 0;				/* show checkbox centered in a row*/
+}
+	@media screen and (max-width: 782px) {
+		.wpbc_flextable .wpbc_selectable_body .wpbc_flextable_row .wpbc_flextable_col.wpbc_flextable_col_check{
+			margin: -2px 0 0;		/* MOBILE: show checkbox centered in a row*/
+		}
+	}
+/* 2nd column - ID */
+.wpbc_flextable .wpbc_flextable_row .wpbc_flextable_col.wpbc_flextable_col_id{
+	flex: 0 1 35px;
+	width:35px;
+}
+/* 3rd column - Title */
+.wpbc_flextable .wpbc_flextable_row .wpbc_flextable_col.wpbc_resource_name{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0 !important;
+	margin: 0;
+	align-self: stretch;
+	min-width: Min(350px,100%);
+}
+	.wpbc_flextable .wpbc_selectable_head .wpbc_flextable_row .wpbc_flextable_col.wpbc_flextable_col_title{
+		flex: 1 1 30%;
+	}
+	.wpbc_flextable .wpbc_selectable_body .wpbc_flextable_row .wpbc_flextable_col.wpbc_flextable_col_title{
+		/*flex: 1 1 31%;*/
+		flex: 1 1 12em;
+	}
+	.wpbc_flextable .wpbc_selectable_body .wpbc_flextable_row .wpbc_flextable_col.wpbc_flextable_col_title input[type="text"]{
+		width: 99% !important;
+	}
+/* 4th column - Labels */
+.wpbc_flextable .wpbc_selectable_body .wpbc_flextable_row .wpbc_flextable_col.wpbc_flextable_labels{
+	flex: 1 1 10%;
+	flex: 1 1 10em;
+}
+.wpbc_flextable .wpbc_selectable_head .wpbc_flextable_row .wpbc_flextable_col.wpbc_flextable_col_other{
+	flex: 1 1 auto;
+}
+.wpbc_flextable .wpbc_flextable_row .wpbc_flextable_col.wpbc_flextable_col_other{
+	flex: 1 1 auto;
+	flex: 1 1 40%;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* C O L O R S 																										  */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.wpbc_flextable {
+	background: #fff;
+	border:0px solid #bbb;
+	margin-bottom: 20px;
+}
+/* STRIPED Table */
+.wpbc_flextable .wpbc_flextable_row{
+	background-color: #f3f3f3;
+	border-left: 4px solid #f3f3f3;
+	border-bottom: 1px solid #dddddd;
+}
+.wpbc_flextable .wpbc_flextable_row:nth-of-type(2n+1){
+	background-color: #f8f8f8;
+	border-left: 4px solid #f8f8f8;
+}
+.wpbc_flextable .wpbc_selectable_head .wpbc_flextable_row,
+.wpbc_flextable .wpbc_selectable_foot .wpbc_flextable_row{
+	background-color: #fff;
+	border-left: 4px solid #fff;
+}
+.wpbc_flextable .wpbc_flextable_row.wpbc_flextable_row_selected{
+	border-left-color: #08a;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* TEXT | LINKS 																									  */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.wpbc_flextable .wpbc_flextable_row .wpbc_flextable_col_head {
+  font-weight: 600;
+  text-align: left;
+}
+.wpbc_flextable .wpbc_flextable_row .wpbc_flextable_col_head a,
+.wpbc_flextable .wpbc_flextable_row .wpbc_flextable_col_head a:hover,
+.wpbc_flextable .wpbc_flextable_row .wpbc_flextable_col_head a:focus {
+    text-decoration: none;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* M O D E R N    S K I N    C O L O R S 																			  */
+/* ------------------------------------------------------------------------------------------------------------------ */
+/**  Resource Tables */
+.wpbc_flextable {
+    box-shadow: 0 0 1px #aaa;
+}
+.wpbc_flextable .wpbc_flextable_row .wpbc_flextable_col {
+  padding: 10px 7px;
+}
+.wpbc_flextable .wpbc_selectable_head .wpbc_flextable_row .wpbc_flextable_col {
+  padding: 0px 7px;
+	line-height: 3;
+}
+.wpbc_flextable .wpbc_flextable_row .wpbc_flextable_col_head{
+	font-size: 14px;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Fieldset - mainly  for Booking > Settings > Sync > "Export - .ics" page. 						  FixIn: 9.8.0.6  */
+/* ------------------------------------------------------------------------------------------------------------------ */
+				.wpbc_selectable_body .wpbc_flextable_row fieldset{
+					display: flex;
+					flex-flow: row wrap;
+					justify-content: flex-start;
+					align-items: center;
+				}
+				.wpbc_selectable_body .wpbc_flextable_row fieldset > *{
+					/*margin: 0 10px 10px 0;*/
+					margin: 5px 10px 5px 0;
+				}
+				.wpbc_selectable_body .wpbc_flextable_row fieldset > a{
+					margin-left:auto;
+				}
+				.wpbc_selectable_body .wpbc_flextable_row fieldset .put-in:active,
+				.wpbc_selectable_body .wpbc_flextable_row fieldset .put-in:focus,
+				.wpbc_selectable_body .wpbc_flextable_row fieldset .put-in{
+					flex:1 0 100%;
+					border:none;
+					outline: none;
+					box-shadow: none;
+					background: transparent;
+					cursor: pointer;
+					padding: 0;
+				}
+				.wpbc_selectable_body .wpbc_flextable_row fieldset > code {
+				  font-size: 12px;
+				  line-height: 22px !important;
+				  background: #ddd;
+				  color: #000;
+				}
+/* End Fieldset - mainly  for Booking > Settings > Sync > "Export - .ics" page */
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Error - No rows 																									  */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.wpbc_flextable .wpbc_flextable_row.wpbc_no_results_row .wpbc_flextable_col {
+	text-align: center;
+	font-weight: 600;
+	font-size: 1.2em;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Other																											  */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.wpbc_flextable .check-column {
+	position: initial;
+}
+.wpbc_flextable .wpbc_selectable_head .wpbc_flextable_row .wpbc_flextable_col.wpbc_flextable_col_other{
+	text-align:center;
+	border-left: 1px solid #ccc;
+}
+	@media screen and (max-width: 1155px) {
+		.wpbc_flextable .wpbc_selectable_head .wpbc_flextable_row .wpbc_flextable_col.wpbc_flextable_col_other{
+			border-left: 0px solid #ccc;		/* MOBILE: show checkbox centered in a row*/
+		}
+	}
+/* Pagination  button  color */
+.wpbc-pagination .button.active,
+.wpbc-pagination .button.active:hover {
+	color:#23282d;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Tabs in Flex Table  for switching view of Table content															  */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.wpbc_flextable_header_tabs .wpdvlp-top-tabs {
+	z-index: 99;
+	background: transparent;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+}
+.wpbc_flextable_header_tabs .wpdvlp-top-tabs .nav-tab-active,
+.wpbc_flextable_header_tabs .wpdvlp-top-tabs a.nav-tab-active:focus {
+	border-bottom-color: #707980;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* RESOURCE    ID --------------- */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.wpbc_flextable .wpbc_label_resource_id_container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.wpbc_flextable .wpbc_label_resource_id_container .wpbc_label_resource_id {
+    padding: 0px 9px;
+    line-height: 2em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border-radius: 12px;
+}
+/* END RESOURCE   ID --------------- */
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Show | Hide sections		-  in SWITCHABLE flex table ROW */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.wpbc_resource_field__switchable{
+	display:none;
+}
+.wpbc_resource_field__switchable.wpbc_resource_field__publish{
+	display:flex;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/*  T o o l b a r   in   Table   R O W s																			  */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.wpbc_flextable_col .wpbc_ajx_toolbar {
+	flex: 1;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+.wpbc_flextable_col .wpbc_ajx_toolbar .ui_container{
+    border: none;
+    background: none;
+    padding: 0;
+    justify-content: space-between;
+    flex: 1;
+}
+/* Elements Height  ------------------------------------------------------------------------------------------------- */
+.wpbc_flextable_col .wpbc_ajx_toolbar .ui_container.ui_container_small *{
+    font-size:13px;
+}
+.wpbc_flextable_col .wpbc_ajx_toolbar .ui_container.ui_container_small .ui_group .ui_element > *{
+    height: 28px;
+    line-height: 28px;
+	min-height: 28px;
+}
+.wpbc_flextable_col .wpbc_ajx_toolbar .ui_container.ui_container_small .ui_group .ui_element > :not(input,select) {
+	padding: 0 10px;
+}
+@media (max-width: 782px) {
+    .wpbc_flextable_col .wpbc_ajx_toolbar .ui_container.ui_container_small .ui_group .ui_element > *{
+        height: 34px;
+        min-height: 28px;
+        line-height: 34px;
+    }
+	.wpbc_flextable_col .wpbc_ajx_toolbar .ui_container.ui_container_small .ui_group .ui_element > input,
+	.wpbc_flextable_col .wpbc_ajx_toolbar .ui_container.ui_container_small .ui_group .ui_element > select {
+		line-height: 1;
+	}
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Publish Elements in toolbar ROW 																					  */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.wpbc_flextable_col .wpbc_ajx_toolbar .ui_container .ui_group.ui_group__labels{
+	min-width:110px;
+}
+.wpbc_flextable_col .wpbc_ajx_toolbar .ui_container .ui_group.ui_group__shortcode{
+	justify-content: stretch !important;
+	flex: 1;
+}
+/* ShortCode  :: Text  Input*/
+.wpbc_flextable_col .wpbc_ajx_toolbar .ui_container .ui_group.ui_group__shortcode .shortcode_text_field {
+	width: 100%;
+	min-width: 22em;
+	text-align: left;
+	cursor: pointer;
+	background-color: #f0f0f0;
+	color: #7a7a7a;
+	font-weight: 600;
+	font-size: 0.92em !important;
+	border: 1px solid #fff !important;
+	box-shadow: 0 0px 2px #cdcdcd;
+}
+.wpbc_flextable_col .wpbc_ajx_toolbar .ui_container .ui_group.ui_group__shortcode div.shortcode_text_field{
+	cursor: text;
+	overflow: hidden;
+	height: auto;
+	line-height: 2.4;
+	/*background: #fff;*/
+	border-radius: 4px;
+}
+/* Custom  Default Form */
+.wpbc_flextable_col .wpbc_ajx_toolbar .ui_container .ui_group.ui_group__customform_field,
+.wpbc_flextable_col .wpbc_ajx_toolbar .ui_container .ui_group.ui_group__customform_field .ui_element{
+	flex: 1;
+}
+/* Parent | Child | Priority */
+.wpbc_flextable_col .wpbc_ajx_toolbar .ui_container .ui_group.ui_group__parent_field,
+.wpbc_flextable_col .wpbc_ajx_toolbar .ui_container .ui_group.ui_group__parent_field .ui_element{
+	flex: 1;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+.wpbc_flextable_col .wpbc_ajx_toolbar .ui_container .ui_group.ui_group__parent_field .ui_element select{
+	flex: 1;
+  	margin: 0 10px;
+	width: Min(10em, 100%);
+  	min-width: 18em;
+}
+.wpbc_flextable_col .wpbc_ajx_toolbar .ui_container .ui_group.ui_group__parent_field .ui_element input[type="text"]{
+	flex: 0 0 5em;
+	margin: 0 10px;
+	font-weight: 400;
+}
+/* Cost  Field */
+.ui_element.ui_cost_field {
+	flex: 0 1 auto;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: first baseline;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* L A B E L S    -   C O L O R S		  																			  */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.wpbc_flextable_labels a.wpbc_label {
+	text-decoration: none;
+}
+.wpbc_flextable_labels .wpbc_label_cost,
+.wpbc_flextable_labels .wpbc_label_cost:focus,
+.wpbc_flextable_labels .wpbc_label_cost:active,
+.wpbc_flextable_labels .wpbc_label_cost:hover{
+	background-color: #64aa45;
+ 	color: #eaffe1;;
+}
+.wpbc_flextable_labels .wpbc_label_resource_single,
+.wpbc_flextable_labels .wpbc_label_resource_single:focus,
+.wpbc_flextable_labels .wpbc_label_resource_single:active,
+.wpbc_flextable_labels .wpbc_label_resource_single:hover{
+	font-weight:600;
+	background-color: #79b;
+	color:#fff;
+}
+.wpbc_flextable_labels .wpbc_label_resource_parent,
+.wpbc_flextable_labels .wpbc_label_resource_parent:focus,
+.wpbc_flextable_labels .wpbc_label_resource_parent:active,
+.wpbc_flextable_labels .wpbc_label_resource_parent:hover{
+	font-weight:600;
+	background-color: #e80;
+	color:#fff;
+}
+.wpbc_flextable_labels .wpbc_label_resource_child,
+.wpbc_flextable_labels .wpbc_label_resource_child:focus,
+.wpbc_flextable_labels .wpbc_label_resource_child:active,
+.wpbc_flextable_labels .wpbc_label_resource_child:hover{
+	font-weight: 400;
+	background-color: #39d;
+	color:#fff;
+}
+.wpbc_flextable_labels .wpbc_label_user_owner,
+.wpbc_flextable_labels .wpbc_label_user_owner:focus,
+.wpbc_flextable_labels .wpbc_label_user_owner:active,
+.wpbc_flextable_labels .wpbc_label_user_owner:hover{
+	background-color: #89a;
+	font-weight: 400;
+	color: #fdfdfd;
+	background-color: #766cba;
+}
+.wpbc_flextable_col .wpbc_ajx_toolbar .ui_container.ui_container_small .wpbc_label.wpbc_label_user_owner strong{
+	font-size:0.8em;
+}
+.wpbc_flextable_labels .wpbc_label_resource_default_form,
+.wpbc_flextable_labels .wpbc_label_resource_default_form:focus,
+.wpbc_flextable_labels .wpbc_label_resource_default_form:active,
+.wpbc_flextable_labels .wpbc_label_resource_default_form:hover{
+	background-color: #89a;
+	font-weight: 400;
+	color: #fdfdfd;
+	background-color: #e7e7e7;
+  	color: #7c7c7c;
+}
+.wpbc_flextable_labels .wpbc_label_resource_lost {
+	background: #ff6c00;
+	color: #6d4223;
+}
+@media screen and (max-width: 845px) {
+	.wpbc_flextable_col_folder_structure,
+	.wpbc_show_hide_children_icon {
+		display: none !important;
+	}
+}

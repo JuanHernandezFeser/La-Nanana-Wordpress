@@ -1,0 +1,820 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ICS Calendar\n"
+"POT-Creation-Date: 2024-04-21 14:14-0500\n"
+"PO-Revision-Date: 2024-04-21 14:14-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: et_EE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: ics-calendar.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: class-r34ics.php:262
+#, php-format
+msgid ""
+"%1$sYou are running ICS Calendar in a WordPress Playground implementation."
+"%2$s Because ICS Calendar is intended to run on a web server, some features "
+"may be unavailable or may not function properly."
+msgstr ""
+"%1$sSa käivitad ICS Calendar'i WordPress Playgroundi rakenduses.%2$s Kuna "
+"ICS Calendar on mõeldud kasutamiseks veebiserveris, võivad mõned "
+"funktsioonid olla kättesaamatud või ei pruugi korralikult toimida."
+
+#: class-r34ics.php:271
+#, php-format
+msgid ""
+"%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
+"This can produce time display errors in the %3$s plugin in locations that "
+"observe Daylight Saving Time. Please %4$schange your timezone setting%5$s to "
+"the city nearest your location, in the same timezone, for proper time "
+"display. See our %6$sdocumentation%7$s for additional information on this "
+"issue."
+msgstr ""
+"%1$sTeie sait kasutab praegu UTC-nihke ajavööndi seadistust.%2$s See võib "
+"tekitada aja kuvamise vigu %3$s pluginas kohtades, kus järgitakse suveaega. "
+"Palun %4$s muutke oma ajavööndi seade %5$s teie asukohale lähima linna "
+"jaoks, mis asub samas ajavööndis, et aeg oleks õigesti kuvatud. Lisateavet "
+"selle probleemi kohta leiate meie %6$sdokumentatsioonist%7$s."
+
+#: class-r34ics.php:289
+#, php-format
+msgid "Cleared %1$s %2$s transient(s)."
+msgstr "Puhastatud %1$s %2$s transient(id)."
+
+#: class-r34ics.php:296
+#, php-format
+msgid "No %1$s transients were found."
+msgstr "Ühtegi %1$s transienti ei leitud."
+
+#: class-r34ics.php:335
+msgid "Settings updated."
+msgstr "Seaded uuendatud."
+
+#: class-r34ics.php:348 templates/admin/sidebar.php:3
+msgid "User Guide"
+msgstr "Kasutusjuhend"
+
+#: class-r34ics.php:350 templates/admin/sidebar.php:28
+msgid "Upgrade to PRO!"
+msgstr "Uuenda PRO!-ks!"
+
+#: class-r34ics.php:368
+msgid "Show/hide all"
+msgstr "Näita/peida kõik"
+
+#: class-r34ics.php:606
+msgid ""
+"ICS file could not be retrieved or was empty. Please verify URL is correct, "
+"and check your php.ini configuration to verify either cURL or "
+"allow_url_fopen is available. If you are using spaces to delimit multiple "
+"URLs, you may also wish to try using the pipe character instead. Affected "
+"URL:"
+msgstr ""
+"ICS-faili ei saanud tuua või see oli tühi. Veenduge, et URL on õige, ja "
+"kontrollige oma php.ini konfiguratsiooni, et kontrollida, kas cURL või "
+"allow_url_fopen on saadaval. Kui kasutate tühikuid mitme URL-i "
+"piiritlemiseks, võite proovida selle asemel kasutada ka torumärki. Mõjutatud "
+"URL:"
+
+#: class-r34ics.php:1018
+msgid "Hide past events"
+msgstr "Peida varasemad sündmused"
+
+#: class-r34ics.php:1019 templates/calendar-month.php:83
+#: templates/calendar-week.php:76
+msgid "Show past events"
+msgstr "Näita varasemaid sündmusi"
+
+#: class-r34ics.php:1093
+msgid "Contact:"
+msgstr "Kontakt:"
+
+#: class-r34ics.php:1099
+msgid "Resources:"
+msgstr "Ressursid:"
+
+#: class-r34ics.php:1109
+msgid "Click for more..."
+msgstr "Klõpsake lisateabe saamiseks..."
+
+#: class-r34ics.php:1141
+msgid "Save to your calendar"
+msgstr "Salvesta oma kalendrisse"
+
+#: class-r34ics.php:1141
+msgid "Download"
+msgstr "Lae alla"
+
+#: class-r34ics.php:1231
+msgid "Cancelled"
+msgstr "Tühistatud"
+
+#: class-r34ics.php:1562
+msgid ""
+"The \"currentweek\" shortcode attribute is deprecated. Please use "
+"view=\"week\" in your shortcode instead."
+msgstr ""
+"Atribuut \"currentweek\" on aegunud. Palun kasutage selle asemel oma "
+"lühikoodis view=\"week\"."
+
+#: class-r34ics.php:1565
+msgid ""
+"The \"legendinline\" shortcode attribute is deprecated. Please use "
+"legendstyle=\"inline\" in your shortcode instead."
+msgstr ""
+"Lühikoodi atribuut \"legendinline\" on aegunud. Palun kasutage selle asemel "
+"oma lühikoodis legendstyle=\"inline\"."
+
+#: class-r34ics.php:1958
+msgid "calendar event"
+msgstr "kalendrisündmus"
+
+#: functions.php:674 functions.php:682 functions.php:691
+msgid "Map"
+msgstr "Kaart"
+
+#: functions.php:866
+msgid "Recurring event"
+msgstr "Korduv sündmus"
+
+#: functions.php:871
+#, php-format
+msgid "Recurs every %s years"
+msgstr "Kordub iga %s aasta järel"
+
+#: functions.php:871
+msgid "Recurs yearly"
+msgstr "Kordub igal aastal"
+
+#: functions.php:874
+#, php-format
+msgid "Recurs every %s months"
+msgstr "Kordub iga %s kuu järel"
+
+#: functions.php:874
+msgid "Recurs monthly"
+msgstr "Kordub igakuiselt"
+
+#: functions.php:877
+#, php-format
+msgid "Recurs every %s weeks"
+msgstr "Kordub iga %s nädala järel"
+
+#: functions.php:877
+msgid "Recurs weekly"
+msgstr "Kordub iga nädal"
+
+#: functions.php:880
+#, php-format
+msgid "Recurs every %s days"
+msgstr "Kordub iga %s päeva järel"
+
+#: functions.php:880
+msgid "Recurs daily"
+msgstr "Kordub iga päev"
+
+#: functions.php:985
+#, php-format
+msgid ""
+"The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
+"most likely your URL has been turned into a clickable link. Your calendar "
+"may not display properly as a result. Please remove the clickable link in "
+"the shortcode."
+msgstr ""
+"Teie %1$s lühikoodi \"url\"-omadus näib sisaldavat HTML-tähiseid; "
+"tõenäoliselt on teie URL muudetud klikitavaks lingiks. Selle tulemusena ei "
+"pruugi teie kalender korralikult kuvada. Palun eemaldage lühikoodis olev "
+"klikitav link."
+
+#: functions.php:1233
+msgid "The r34ics_url_get_contents() function is no longer supported."
+msgstr "Funktsiooni r34ics_url_get_contents() enam ei toetata."
+
+#: ics-calendar.php:93
+#, php-format
+msgid ""
+"Thank you for installing %1$s. Before creating your first calendar "
+"shortcode, please visit your %2$sGeneral Settings%3$s page and verify that "
+"your site language, timezone and date/time format settings are correct. See "
+"our %4$sUser Guide%5$s for more information."
+msgstr ""
+"Aitäh paigaldamise eest %1$s. Enne oma esimese kalendri lühikoodi loomist "
+"külastage palun oma %2$sÜldised seaded%3$s lehte ja kontrollige, et teie "
+"saidi keel, ajavöönd ja kuupäeva/kellaajavorming oleksid õiged. Lisateavet "
+"leiate meie %4$skasutusjuhendist%5$s."
+
+#: ics-calendar.php:135
+#, php-format
+msgid ""
+"%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
+"retrieved. This change uses a standard built-in WordPress function, so it "
+"should be fully compatible with all existing installations. If you encounter "
+"any new issues after upgrading to version 11 or later, please visit the "
+"%4$sWordPress Support Forums%5$s for assistance."
+msgstr ""
+"%1$sPange tähele:%2$s %3$s versioon 11.0 ühtlustab ICS-i sööda URL-ide "
+"otsimise viisi. See muudatus kasutab WordPressi standardset sisseehitatud "
+"funktsiooni, nii et see peaks olema täielikult ühilduv kõigi olemasolevate "
+"paigaldustega. Kui teil tekib pärast versiooni 11 või uuema versiooni "
+"uuendamist uusi probleeme, külastage abi saamiseks %4$sWordPressi "
+"tugifoorumeid%5$s."
+
+#: ics-calendar.php:145
+#, php-format
+msgid ""
+"%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
+"several shortcode settings. In order to maintain consistency, these new "
+"defaults are %4$snot%5$s enabled when upgrading from an earlier version. If "
+"you would like to learn more about the changes please read our %6$sblog "
+"post%7$s, or to switch to the new defaults, turn on the %8$s option on the "
+"%9$s settings%10$s page."
+msgstr ""
+"%1$sPane tähele:%2$s %3$s versioon 10.6 muudab mitmete lühikoodide seadete "
+"vaikimisi valikuid. Järjepidevuse säilitamiseks ei %4$s ole need uued "
+"vaikeväärtused %5$s varasemast versioonist uuendamisel lubatud. Kui soovite "
+"muudatuste kohta rohkem teada saada, lugege meie %6$sblogipostitust%7$s või "
+"lülitage uute vaikimisi väärtuste kasutamiseks sisse %8$svalik "
+"%9$sseadete%10$slehel."
+
+#: ics-calendar.php:145 templates/admin/admin-options.php:24
+msgid "Use new parameter defaults (v.10.6)"
+msgstr "Kasutage uusi parameetri vaikeväärtusi (v.10.6)"
+
+#: templates/admin/add-calendar-button.php:1 templates/admin/add-calendar.php:6
+#, php-format
+msgid "Add %1$s"
+msgstr "Lisa %1$s"
+
+#: templates/admin/add-calendar.php:7
+msgid "Close"
+msgstr "Sulge"
+
+#: templates/admin/add-calendar.php:16
+msgid "ICS Feed URL:"
+msgstr "ICS Feed URL:"
+
+#: templates/admin/add-calendar.php:18
+#, php-format
+msgid ""
+"Be sure you are using a %1$ssubscribe%2$s URL, not a %3$sweb view%4$s URL."
+"%5$s (Entering the URL directly in your web browser should download an %6$s "
+"file.)"
+msgstr ""
+"Veenduge, et kasutate %1$ssubscribe%2$s URL-i, mitte %3$sweb view%4$s URL-i."
+"%5$s (Kui sisestate URL-i otse veebibrauserisse, peaks see alla laadima %6$s "
+"faili.)"
+
+#: templates/admin/add-calendar.php:22
+msgid "Calendar Title:"
+msgstr "Kalendri pealkiri:"
+
+#: templates/admin/add-calendar.php:24
+#, php-format
+msgid ""
+"Leave empty to use calendar&rsquo;s default title. Enter %1$s to omit title "
+"altogether."
+msgstr ""
+"Jäta tühjaks, et kasutada kalendri vaikimisi pealkirja. Sisestage %1$s, et "
+"pealkiri üldse välja jätta."
+
+#: templates/admin/add-calendar.php:28
+msgid "Calendar Description:"
+msgstr "Kalendri kirjeldus:"
+
+#: templates/admin/add-calendar.php:30
+#, php-format
+msgid ""
+"Leave empty to use calendar&rsquo;s default description. Enter %1$s to omit "
+"description altogether."
+msgstr ""
+"Jäta tühjaks, et kasutada kalendri vaikimisi kirjeldust. Kirjutage %1$s, kui "
+"soovite kirjeldust üldse mitte kasutada."
+
+#: templates/admin/add-calendar.php:34
+msgid "View:"
+msgstr "Vaata:"
+
+#: templates/admin/add-calendar.php:36
+msgid "month"
+msgstr "kuu"
+
+#: templates/admin/add-calendar.php:37
+msgid "list"
+msgstr "loend"
+
+#: templates/admin/add-calendar.php:38
+msgid "week"
+msgstr "nädal"
+
+#: templates/admin/add-calendar.php:43 templates/admin/add-calendar.php:48
+msgid "Count:"
+msgstr "Krahv:"
+
+#: templates/admin/add-calendar.php:46 templates/admin/add-calendar.php:48
+msgid "Format:"
+msgstr "Vorming:"
+
+#: templates/admin/add-calendar.php:48
+#, php-format
+msgid ""
+"Leave %1$s blank to include all upcoming events. %2$s must be a standard "
+"%3$sPHP date format string%4$s."
+msgstr ""
+"Jäta %1$s tühjaks, et lisada kõik eelseisvad sündmused. %2$s peab olema "
+"standardne %3$sPHP kuupäeva formaadis string%4$s."
+
+#: templates/admin/add-calendar.php:53
+#, php-format
+msgid ""
+"Show event descriptions %1$s(change to a number in inserted shortcode to set "
+"word limit)%2$s"
+msgstr ""
+"Näita sündmuse kirjeldusi %1$s(muutke sisestatud lühikoodis numbriks, et "
+"seada sõnapiirang)%2$s"
+
+#: templates/admin/add-calendar.php:58
+#, php-format
+msgid "Show event locations %1$s(if available)%2$s"
+msgstr "Näita sündmuste asukohti %1$s(kui on olemas)%2$s"
+
+#: templates/admin/add-calendar.php:63
+#, php-format
+msgid "Show event organizers %1$s(if available)%2$s"
+msgstr "Näita sündmuse korraldajaid %1$s(kui on olemas)%2$s"
+
+#: templates/admin/add-calendar.php:67
+#, php-format
+msgid ""
+"%1$sNote:%2$s Additional %3$sdisplay options%4$s are available by manually "
+"editing the shortcode after insertion."
+msgstr ""
+"%1$sMärkus:%2$s Täiendavad %3$skuvamisvõimalused%4$s on saadaval lühikoodi "
+"käsitsi redigeerimisel pärast sisestamist."
+
+#: templates/admin/add-calendar.php:71
+#, php-format
+msgid "Insert %1$s"
+msgstr "Sisesta %1$s"
+
+#: templates/admin/admin-options.php:2
+msgid "Transient (cache) expiration"
+msgstr "Ajutine (vahemälu) aegumine"
+
+#: templates/admin/admin-options.php:2
+msgid "seconds"
+msgstr "sekundit"
+
+#: templates/admin/admin-options.php:3
+msgid ""
+"Sets how long calendar feed data should be cached on the server (WordPress "
+"transients) before reloading. Default is 3600 (1 hour)."
+msgstr ""
+"Määrab, kui kaua kalendrisööda andmed peaksid enne uuesti laadimist serveris "
+"vahemällu salvestatud olema (WordPressi üleminekud). Vaikimisi on 3600 (1 "
+"tund)."
+
+#: templates/admin/admin-options.php:7
+msgid "Allow access to these hostnames that resolve to reserved IP addresses"
+msgstr ""
+"Lubage juurdepääs nendele hostinimedele, mis lahendatakse reserveeritud IP-"
+"aadressidele"
+
+#: templates/admin/admin-options.php:9
+#, php-format
+msgid ""
+"If your calendar server is hosted on the same physical server as your "
+"website, is part of the same local network, or otherwise uses a %1$sreserved "
+"IP address%2$s, enter its hostname here to allow access. For multiple "
+"calendar servers, enter one hostname per line. See %3$sthe %4$s "
+"documentation%5$s for more information."
+msgstr ""
+"Kui teie kalendriserver asub samas füüsilises serveris nagu teie veebisait, "
+"on osa samast kohalikust võrgust või kasutab muul viisil %1$sreserveeritud "
+"IP-aadressi%2$s, sisestage siia selle hostinimi, et võimaldada juurdepääsu. "
+"Mitme kalendriserveri puhul sisestage üks hostinimi iga rea kohta. "
+"Lisateavet leiate %3$sdokumentatsioonist %4$s%5$s."
+
+#: templates/admin/admin-options.php:10
+msgid "Enter one hostname per line."
+msgstr "Sisestage üks hostinimi rea kohta."
+
+#: templates/admin/admin-options.php:14
+msgid "Use legacy feed request method"
+msgstr "Kasutage pärimussööda taotlemise meetodit"
+
+#: templates/admin/admin-options.php:15
+msgid ""
+"If your site has stopped retrieving feeds after the version 11 update, turn "
+"on this option to use the legacy request method."
+msgstr ""
+"Kui teie sait on pärast 11. versiooni uuendamist lõpetanud söötade päringu "
+"saamise, lülitage see valik sisse, et kasutada pärimuse päringumeetodit."
+
+#: templates/admin/admin-options.php:19
+msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
+msgstr "Eemalda nupp \"Lisa ICS kalender\" klassikalises redaktoris"
+
+#: templates/admin/admin-options.php:20
+msgid ""
+"By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
+"above the WYSIWYG editor when using Classic Editor. Check this box to remove "
+"the button. Has no effect on sites using the Block Editor (Gutenberg)."
+msgstr ""
+"Vaikimisi lisab ICS Calendar nupu \"Lisa ICS Calendar\" tööriistaribale "
+"WYSIWYG redaktori kohal, kui kasutate klassikalist redaktorit. Selle nupu "
+"eemaldamiseks märgistage see ruut. Ei mõjuta saite, mis kasutavad "
+"plokkredaktorit (Gutenberg)."
+
+#: templates/admin/admin-options.php:25
+#, php-format
+msgid ""
+"%1$s version 10.6 introduced new default values for several shortcode "
+"parameters. New installations automatically use the new default values, but "
+"upgraded installations will continue to use the old default values, unless "
+"this box is checked. Read more about these changes on %2$sour blog%3$s."
+msgstr ""
+"%1$s versioon 10.6 võttis kasutusele uued vaikeväärtused mitme lühikoodi "
+"parameetri jaoks. Uued paigaldused kasutavad automaatselt uusi "
+"vaikeväärtusi, kuid uuendatud paigaldused kasutavad jätkuvalt vanu "
+"vaikeväärtusi, kui see ruut ei ole märgitud. Lisateavet nende muudatuste "
+"kohta leiate %2$s meie blogist%3$s."
+
+#: templates/admin/admin.php:15
+msgid "Basic Shortcode Example"
+msgstr "Põhiline lühikoodi näide"
+
+#: templates/admin/admin.php:17
+#, php-format
+msgid ""
+"Use the following shortcode format in your page content where you would like "
+"your calendar to appear, inserting your ICS feed URL between the quotation "
+"marks. If you do not know your ICS feed URL, %1$shere&rsquo;s how to find "
+"it%2$s."
+msgstr ""
+"Kasutage järgmist lühikoodi formaati oma lehekülje sisus, kus soovite, et "
+"teie kalender ilmuks, sisestades oma ICS-i sööda URL-i jutumärkide vahele. "
+"Kui te ei tea oma ICS-i sööda URL-i, %1$s on siin, kuidas seda leida%2$s."
+
+#: templates/admin/admin.php:21
+#, php-format
+msgid ""
+"Many additional customization options are available. Use our online "
+"%1$sShortcode Builder%2$s to easily create a customized shortcode, or "
+"consult the %3$sUser Guide%4$s for more information."
+msgstr ""
+"Saadaval on palju täiendavaid kohandamisvõimalusi. Kasutage meie veebipõhist "
+"%1$sShortcode Builderit%2$s, et hõlpsasti luua kohandatud lühikood või "
+"tutvuge %3$sKasutusjuhendiga%4$s, et saada lisateavet."
+
+#: templates/admin/admin.php:35
+msgid "Administrative Options"
+msgstr "Administratiivsed valikud"
+
+#: templates/admin/admin.php:44
+msgid "Save Changes"
+msgstr "Salvesta muudatused"
+
+#: templates/admin/sidebar.php:5
+msgid ""
+"Our complete user guide is available with full translation into dozens of "
+"languages on our website:"
+msgstr ""
+"Meie täielik kasutusjuhend on saadaval koos täieliku tõlkega kümnetesse "
+"keeltesse meie veebisaidil:"
+
+#: templates/admin/sidebar.php:7
+msgid "Support"
+msgstr "Tugi"
+
+#: templates/admin/sidebar.php:9
+#, php-format
+msgid ""
+"For support please email %1$s or use the %2$sWordPress Support Forums%3$s."
+msgstr ""
+"Toe saamiseks saatke %1$s e-kiri või kasutage %2$sWordPressi "
+"tugifoorumeid%3$s."
+
+#: templates/admin/sidebar.php:19
+#, php-format
+msgid "When emailing, please include the %1$sSystem Report%2$s from this page."
+msgstr ""
+"Kui saadate e-kirja, lisage palun selle lehekülje %1$sSüsteemi aruanne%2$s."
+
+#: templates/admin/sidebar.php:29
+#, php-format
+msgid ""
+"Features include additional views (Full, Masonry, Month with Sidebar, "
+"Widget, Year-at-a-Glance, and others), a Calendar Builder with save feature "
+"for full management of calendar settings without manually editing the "
+"shortcode, Customizer options to easily modify the calendar&rsquo;s "
+"appearance, advanced features like regular expressions, and more! Visit %s "
+"to learn more."
+msgstr ""
+"Funktsioonide hulka kuuluvad täiendavad vaated (Täielik, Masonry, Kuu koos "
+"külgribaga, Widget, Year-at-a-Glance ja teised), Calendar Builder koos "
+"salvestusfunktsiooniga kalendri seadete täielikuks haldamiseks ilma "
+"lühikoodi käsitsi muutmata, Customizer valikud kalendri välimuse lihtsaks "
+"muutmiseks, täiustatud funktsioonid nagu regulaaravaldised ja palju muud! "
+"Külastage %s, et rohkem teada saada."
+
+#: templates/admin/sidebar.php:31
+msgid "Go PRO!"
+msgstr "Mine PRO!"
+
+#: templates/admin/utilities.php:3
+#, php-format
+msgid "%1$s Data Cache"
+msgstr "%1$s Andmete vahemälu"
+
+#: templates/admin/utilities.php:9
+msgid "Clear Cached Calendar Data"
+msgstr "Tühjenda vahemällu talletatud kalendriandmed"
+
+#: templates/admin/utilities.php:10
+msgid ""
+"This will immediately clear all existing cached calendar data (purge "
+"transients), forcing WordPress to reload all calendars the next time they "
+"are viewed. Caching will then resume as before."
+msgstr ""
+"See kustutab kohe kõik olemasolevad vahemällu salvestatud kalendriandmed "
+"(puhastage möödujad), sundides WordPressi järgmisel vaatamisel kõik "
+"kalendrid uuesti laadima. Vahemällu salvestamine jätkub nagu varemgi."
+
+#: templates/admin/utilities.php:19
+msgid "ICS Feed URL Tester"
+msgstr "ICS-kanali URL-i tester"
+
+#: templates/admin/utilities.php:21
+msgid ""
+"If you are concerned that the plugin is not properly retrieving your feed, "
+"you can test the URL here."
+msgstr ""
+"Kui olete mures, et plugin ei too teie kanalit õigesti, saate URL-i siin "
+"testida. Allpool kuvatakse plugina saadud toorandmed."
+
+#: templates/admin/utilities.php:28
+msgid "Enter feed URL..."
+msgstr "Sisesta kanali URL..."
+
+#: templates/admin/utilities.php:28
+msgid "Test URL"
+msgstr "Testi URL-i"
+
+#: templates/admin/utilities.php:35 templates/admin/utilities.php:52
+#: templates/admin/utilities.php:58
+msgid "Results:"
+msgstr "Tulemused:"
+
+#: templates/admin/utilities.php:36
+#, php-format
+msgid "%s received."
+msgstr "%s vastu võetud."
+
+#: templates/admin/utilities.php:40
+msgid "This appears to be a valid ICS feed URL."
+msgstr "See näib olevat kehtiv ICS-i sööda URL."
+
+#: templates/admin/utilities.php:45
+msgid "This does not appear to be a valid ICS feed URL."
+msgstr "See ei tundu olevat kehtiv ICS-i sööda URL."
+
+#: templates/admin/utilities.php:53
+msgid "Could not retrieve data from the requested URL."
+msgstr "Taotletud URL-ilt ei saanud andmeid tuua."
+
+#: templates/admin/utilities.php:59
+msgid ""
+"An unknown error occurred while attempting to retrieve the requested URL."
+msgstr "Taotletud URL-i toomise katsel ilmnes tundmatu tõrge."
+
+#: templates/admin/utilities.php:79
+msgid "System Report"
+msgstr "Süsteemi aruanne"
+
+#: templates/admin/utilities.php:81
+msgid ""
+"Please copy the following text and include it in your message when emailing "
+"support."
+msgstr ""
+"Kopeerige järgmine tekst ja lisage see oma sõnumisse toe meiliga saatmisel."
+
+#: templates/admin/utilities.php:82
+#, php-format
+msgid ""
+"Also please include the %1$s shortcode exactly as you have it entered on the "
+"affected page."
+msgstr ""
+"Palun lisage ka lühikood %1$s täpselt nii, nagu see on sisestatud mõjutatud "
+"leheküljele."
+
+#: templates/admin/utilities.php:82
+msgid ""
+"For your site security please do NOT post the System Report in the support "
+"forums."
+msgstr ""
+"Teie saidi turvalisuse huvides palun ärge postitage süsteemiaruannet "
+"tugifoorumidesse."
+
+#: templates/calendar-basic.php:56 templates/calendar-list.php:57
+msgid "No events found."
+msgstr "Sündmusi ei leitud."
+
+#: templates/calendar-basic.php:77 templates/calendar-list.php:78
+msgid "Previous Page"
+msgstr "Eelmine lk"
+
+#: templates/calendar-basic.php:78 templates/calendar-list.php:79
+msgid "Next Page"
+msgstr "Järgmine lk"
+
+#: templates/calendar-list.php:283 templates/calendar-month.php:189
+#: templates/calendar-week.php:198
+msgid "All Day"
+msgstr "Kogu päev"
+
+#: templates/calendar-month.php:58
+msgid "Today"
+msgstr "Täna"
+
+#: templates/calendar-month.php:271 templates/calendar-week.php:283
+msgid "No events."
+msgstr "Ei mingeid sündmusi."
+
+#: templates/calendar-month.php:283
+msgid "No additional events this month."
+msgstr "Sel kuul lisaüritusi ei ole."
+
+#: templates/calendar-week.php:66
+msgid "Last week"
+msgstr "Eelmisel nädalal"
+
+#: templates/calendar-week.php:67
+msgid "This week"
+msgstr "Sel nädalal"
+
+#: templates/calendar-week.php:68
+msgid "Next week"
+msgstr "Järgmisel nädalal"
+
+#. Plugin Name of the plugin/theme
+msgid "ICS Calendar"
+msgstr "ICS Calendar"
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://icscalendar.com"
+msgstr "https://icscalendar.com"
+
+#. Description of the plugin/theme
+msgid ""
+"Turn your Google Calendar, Microsoft Office 365 or Apple iCloud Calendar "
+"into a seamlessly integrated, auto-updating, zero-maintenance WordPress "
+"experience."
+msgstr ""
+"Muutke oma Google'i kalender, Microsoft Office 365 või Apple iCloudi "
+"kalender sujuvalt integreeritud, automaatselt uuendatavaks ja hooldusvabaks "
+"WordPressi kogemuseks."
+
+#. Author of the plugin/theme
+msgid "Room 34 Creative Services, LLC"
+msgstr "Room 34 Creative Services, LLC"
+
+#, php-format
+#~ msgid ""
+#~ "The %1$s plugin requires either the PHP cURL extensions, or the %2$s PHP "
+#~ "setting to be turned on. Please update the settings in your %3$s file or "
+#~ "contact your hosting provider for assistance."
+#~ msgstr ""
+#~ "Plugin %1$s nõuab kas PHP cURL laienduste või %2$s PHP seadistuse "
+#~ "sisselülitamist. Palun ajakohastage seaded oma %3$s failis või võtke abi "
+#~ "saamiseks ühendust oma veebimajutuse pakkujaga."
+
+#~ msgid ""
+#~ "The \"limitdayscustom\" setting is for internal use within the ICS "
+#~ "Calendar plugin, and should not appear directly in your shortcode."
+#~ msgstr ""
+#~ "Seade \"limitdayscustom\" on mõeldud ICS Calendar pluginas sisemiseks "
+#~ "kasutamiseks ja ei tohiks ilmuda otse teie lühikoodis."
+
+#~ msgid "Ends"
+#~ msgstr "Lõpeb"
+
+#~ msgid "Embed a live updating iCal (ICS) feed in any page using a shortcode."
+#~ msgstr ""
+#~ "Manustage reaalajas värskendamise iCali (ICS) kanal mis tahes lehele "
+#~ "lühikoodi abil."
+
+#, php-format
+#~ msgid "Load CSS and JS files on %1$s action"
+#~ msgstr "CSS- ja JS-failide laadimine %1$s toimingule"
+
+#, php-format
+#~ msgid ""
+#~ "As of version 10.6, %1$s loads CSS and JavaScript assets conditionally on "
+#~ "the %2$s action, only on pages that include a calendar. Previously these "
+#~ "files were loaded on the %3$s action on every page of the site. If your "
+#~ "CSS customizations have stopped functioning after the update, turn on "
+#~ "this option to revert to the old functionality."
+#~ msgstr ""
+#~ "Alates versioonist 10.6 laeb %1$s CSS ja JavaScript varasid "
+#~ "tingimuslikult %2$s toiminguga, ainult lehtedel, mis sisaldavad "
+#~ "kalendrit. Varem laaditi need failid toiminguga %3$s igal saidi "
+#~ "leheküljel. Kui teie CSSi kohandused on pärast värskendust lakanud "
+#~ "toimimast, lülitage see valik sisse, et taastada vana funktsionaalsus."
+
+#, php-format
+#~ msgid ""
+#~ "To insert an %1$s in a page, use the following shortcode format, "
+#~ "replacing the all-caps text with your feed URL. Many additional "
+#~ "customization options are available. Please see the %2$sUser Guide%3$s "
+#~ "for details."
+#~ msgstr ""
+#~ "Leheküljele %1$s lisamiseks kasutage järgmist lühikoodi formaati, "
+#~ "asendades täpitähti täisväärtusliku teksti oma sööda URL-iga. Saadaval on "
+#~ "palju täiendavaid kohandamisvõimalusi. Üksikasjalikumat teavet leiate "
+#~ "%2$skasutusjuhendist%3$s."
+
+#~ msgid "Thank You!"
+#~ msgstr "Aitäh!"
+
+#, php-format
+#~ msgid ""
+#~ "This plugin is free to use. If you find it to be of value, we welcome "
+#~ "your donation (suggested amount: US $9), to help fund future development, "
+#~ "or get the advanced features of the %1$sPRO version%2$s for just US $29/"
+#~ "year."
+#~ msgstr ""
+#~ "See plugin on tasuta kasutamiseks. Kui leiate, et see on väärtuslik, "
+#~ "tervitame teie annetust (soovitatav summa: 9 USA dollarit), et aidata "
+#~ "rahastada edasist arengut või saada %1$sPRO versiooni täiustatud "
+#~ "funktsioone%2$s vaid 29 USA dollari eest aastas."
+
+#~ msgid "Make a Donation"
+#~ msgstr "Tee annetus"
+
+#~ msgid "https://room34.com"
+#~ msgstr "https://room34.com"
+
+#~ msgid "Utilities"
+#~ msgstr "Tööriistad"
+
+#~ msgid "ICS documentation and tools:"
+#~ msgstr "ICS dokumentatsioon ja tööriistad:"
+
+#~ msgid "ICS Parser at GitHub"
+#~ msgstr "ICS Parser GitHubis"
+
+#~ msgid "iCal Validator"
+#~ msgstr "iCali valideerija"
+
+#~ msgid "Recurrence Rule Tester"
+#~ msgstr "Kordusreegli tester"
+
+#~ msgid "Miscellaneous reference and tools:"
+#~ msgstr "Mitmesugused viited ja tööriistad:"
+
+#~ msgid "HTML Color Picker"
+#~ msgstr "HTML-värvivalija"
+
+#~ msgid "Unix Timestamp Converter"
+#~ msgstr "Unix ajatempli muundur"
+
+#~ msgid "Add ICS Calendar"
+#~ msgstr "ICS-kalendri lisamine"
+
+#~ msgid "Your site is currently using a UTC offset-based timezone setting."
+#~ msgstr "Teie sait kasutab praegu UTC nihkepõhist ajavööndisätet."
+
+#, php-format
+#~ msgid ""
+#~ "This can produce time display errors in the %s plugin in locations that "
+#~ "observe Daylight Saving Time."
+#~ msgstr ""
+#~ "See võib tekitada ajakuva tõrkeid %s lisandmoodulis kohtades, mis "
+#~ "jälgivad suveaega."
+
+#, php-format
+#~ msgid ""
+#~ "Please %1$schange your timezone setting%2$s to the city nearest your "
+#~ "location, in the same timezone, for proper time display."
+#~ msgstr ""
+#~ "Palun %1$skeerdage oma ajavööndi seadistus%2$s teie asukoha lähimasse "
+#~ "linna samas ajavööndis, et kuvada aeg."
+
+#, php-format
+#~ msgid ""
+#~ "See the %1$sPHP documentation%2$s for additional information on this "
+#~ "issue."
+#~ msgstr "Lisateavet selle teema kohta leiate %1$sPHP dokumentatsioonist%2$s."

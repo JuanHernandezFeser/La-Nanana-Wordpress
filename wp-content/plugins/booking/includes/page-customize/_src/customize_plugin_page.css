@@ -1,0 +1,208 @@
+/** Upgrade ***********************************************************************************************************/
+.wpbc_ajx_toolbar .ui_container .ui_group.ui_group__upgrade {
+	flex: 1 1 auto;
+	height: 6em;
+	position: relative;
+	margin: 0 0 5px;
+}
+.wpbc_ajx_toolbar .ui_container .ui_group.wpbc_blur{
+	flex: 1 1 auto;
+}
+/** TOOLBAR ***********************************************************************************************************/
+
+/* Override default settings of main  toolbar: ../includes/_toolbar_ui/_src/toolbar_ui.css */
+#toolbar_booking_customize_plugin.wpbc_ajx_toolbar {
+	margin: 0;		/* margin: 0 0 10px 50px; */
+}
+
+
+/** CONTENT ***********************************************************************************************************/
+/* Main container */
+.wpbc_ajx_cstm__container {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 20px 0 0;
+}
+/* LEFT section */
+.wpbc_ajx_cstm__container .wpbc_ajx_cstm__section_left {
+	flex: 1 1 auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+	/* Calendar in right section */
+	.wpbc_ajx_cstm__calendar{
+		width:100%;
+		max-width:100%;
+		margin:0;
+	}
+/* RIGHT section - Fixed width */
+.wpbc_ajx_cstm__container .wpbc_ajx_cstm__section_right {
+	flex: 0 0 280px;
+	margin: 0 0 0 30px;
+
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+	align-items: flex-end;
+}
+
+
+/** WIDGETS ***********************************************************************************************************/
+
+/* Widgets Section	- Define width  of widget here  */
+.wpbc_widgets {
+	width:100%;				/* WIDTH of WIDGETs*/
+
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+/* Widget */
+.wpbc_widgets .wpbc_widget {
+	margin: 0 0 20px;
+	width:100%;
+	flex: 1 1 100%;
+}
+/* Widget Header */
+ .wpbc_widget .wpbc_widget_header {
+	width: 100%;
+	height: 44px;
+
+	border: 1px solid #ccc;
+	background: #fff;
+
+	font-weight: 600;
+	text-shadow: none;
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+ }
+ /* Widget Header text */
+ .wpbc_widget .wpbc_widget_header .wpbc_widget_header_text {
+	 flex: 1 1 auto;
+	 padding: 0 15px;
+ }
+ /* Settings Link in right side of header */
+.wpbc_widget .wpbc_widget_header .wpbc_widget_header_settings_link {
+	flex: 0 0 auto;
+	margin-left: auto;
+	border-left: 1px solid #ccc;
+	padding: 5px 10px;
+	color: #0e70b7;
+	display: none;
+}
+
+
+/** MOBILE  ***********************************************************************************************************/
+@media (max-width: 600px) {
+	.wpbc_ajx_cstm__container {
+		flex-flow: row wrap;
+	}
+	.wpbc_ajx_cstm__container .wpbc_ajx_cstm__section_left {
+		order: 2;
+	}
+	.wpbc_ajx_cstm__container .wpbc_ajx_cstm__section_right {
+		order: 1;
+		flex: 1 1 auto;
+		margin: 0;
+	}
+}
+@media (max-width: 470px) {
+}
+
+
+/** Toolbar Text Bar  **********************************************************************************************/
+#wpbc_toolbar_dates_hint .ui_element .wpbc_text_bar  {
+	font-size: 1.1em;
+	line-height: 1.8em;
+	/*height: auto;*/
+}
+/* Sub Bar - Text Titles */
+#wpbc_toolbar_dates_hint .ui_element .wpbc_text_bar *{
+	font-size: 1em;
+}
+/* Sub Bar - Links to  sections */
+#wpbc_toolbar_dates_hint .ui_element .wpbc_text_bar .wpbc_option_step  a,
+#wpbc_toolbar_dates_hint .ui_element .wpbc_text_bar .wpbc_option_step  a:focus{
+	color: #555;
+	outline: none;
+	padding: 3px 10px;
+	text-decoration: none;
+}
+#wpbc_toolbar_dates_hint .ui_element .wpbc_text_bar .wpbc_option_step:hover{
+	cursor: default;
+}
+#wpbc_toolbar_dates_hint .ui_element .wpbc_text_bar .wpbc_option_step  a:hover{
+	color: #D54E21 !important;
+	background-color: transparent !important;
+	border-bottom-color: #d54e21;
+	text-decoration: none;
+}
+/** Toolbar Text Bar - Resources **********************************************************************************************/
+#wpbc_hidden_template__select_booking_resource {
+	display: none;
+}
+
+/** Toolbar Dates Hints  **********************************************************************************************/
+#wpbc_hidden_template__select_booking_resource {
+	flex: 0 1 auto;
+}
+#wpbc_toolbar_dates_hint{
+	flex: 1 1 auto;
+	justify-content: flex-start;
+	margin-left: 0;
+}
+#wpbc_toolbar_dates_hint .ui_element {
+
+}
+#wpbc_toolbar_dates_hint .ui_element .wpbc_help_text {
+	font-size: 1.1em;
+	line-height: 1.8em;
+	/*height: auto;*/
+}
+#wpbc_toolbar_dates_hint .ui_element .wpbc_help_text *{
+	font-size: 1em;
+}
+#wpbc_toolbar_dates_hint .ui_element .wpbc_help_text strong{
+
+}
+/* Dates hints */
+.wpbc_ajx_toolbar .wpbc_help_text .wpbc_toolbar_dates_hints {
+	font-size: 1.05em;
+
+	display: block;
+			/*flex-flow: row wrap;*/
+	/*width: 100%;*/
+			/*justify-content: flex-start;*/
+			/*align-items: first baseline;*/
+}
+.wpbc_ajx_toolbar .wpbc_help_text .wpbc_toolbar_dates_hints span{
+			/*flex: 1 1 auto;*/
+	padding: 0 0.2em;
+}
+.wpbc_ajx_toolbar .wpbc_help_text .wpbc_toolbar_dates_hints span.wpbc_big_text,
+.wpbc_ajx_toolbar .wpbc_help_text .wpbc_toolbar_dates_hints span.wpbc_big_date{
+	font-size: 1.05em;
+	font-weight: 600;
+	padding: 0 0.3em;
+}
+
+/* Sub section of elements with left padding  ----------------------------------------------------------------------- */
+.ui_element_sub_section {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	flex: 1 1 100%;
+	border: 1px dashed #a6a6a6;
+	border-radius: 4px;
+	padding: 5px 12px 5px;
+	margin: 5px 0 5px 25px;
+}

@@ -1,0 +1,67 @@
+@media print {
+	/* Fix issue of having 2 pages instead of 1 */
+	html, body {
+		height: auto;
+	}
+	html.wp-toolbar {
+		padding-top: 0;
+	}
+	/* Set exact colors for printing & text color to black! */
+	#wpbc__print_frame__inner *{
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+
+		color:#000 !important;
+	}
+}
+/* Set print Modal window scrollable */
+#wpbc_ajx_print_modal .modal-body {
+	max-height: 550px;
+	overflow-y: scroll;
+}
+/* Checkbox column */
+#wpbc__print_frame__inner .check-column {
+	display: none;
+}
+/* Creation dates line -- Move up*/
+#wpbc__print_frame__inner .wpbc_item_actions .wpbc_actions_sysinfo{
+	margin-top: -2em;
+}
+/* Buttons -- hide */
+#wpbc__print_frame__inner .wpbc_actions_buttons {
+	display: none;
+}
+/* Dates icon in header  -- hide */
+#wpbc__print_frame__inner .wpbc_listing_header_action_icon {
+	display: none;
+}
+/* Labels */
+#wpbc__print_frame__inner .wpbc_col_labels .content_text .wpbc_label {
+  padding: 0 5px;
+  line-height: 2em;
+  font-size: 12px;
+}
+/* Field Values without background */
+#wpbc__print_frame__inner .wpbc_listing_usual_row .fieldvalue {
+	background: transparent !important;
+	color:#000 !important;
+}
+/* Set border & background to  ROWs */
+#wpbc__print_frame__inner .wpbc_listing_usual_row  {
+	border: 1px solid #ddd !important;
+	background: transparent;
+}
+/* Header background */
+#wpbc__print_frame__inner .wpbc_listing_usual_row.wpbc_list_header{
+	background: #eee;
+}
+/* Odd ROW background */
+#wpbc__print_frame__inner .wpbc_listing_usual_row:nth-of-type(2n) {
+  background: #fafafa;
+}
+/* New bookings*/
+#wpbc__print_frame__inner .wpbc_is_new_button{
+	position: relative;
+	margin-left: 0px;
+	margin-right: 1em;
+}

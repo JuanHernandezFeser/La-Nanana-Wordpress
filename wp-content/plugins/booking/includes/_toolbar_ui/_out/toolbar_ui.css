@@ -1,0 +1,1419 @@
+/* UI Toolbar  *************************************************************************************************/
+/* To Compile file: Alt + F12   and run command:  "gulp wpbc"  */
+/* 1. Default Button Style ------------------------------------------------------------------------------------------ */
+.ui_element .wpbc_ui_button,
+.ui_element .wpbc_button_as_icon {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: center;
+      align-items: center;
+  text-decoration: none;
+  /*font-size: 13px;*/
+  /*line-height: 2.15384615; !* 28px *!*/
+  /*min-height: 30px;*/
+  min-height: 24px;
+  margin: 0;
+  padding: 0 10px 2px;
+  padding-bottom: 1px;
+  cursor: pointer;
+  /*border-width: 1px;  	- Defined at Several elements in a Group. Point #2. */
+  border-style: solid;
+  -webkit-appearance: none;
+  /*border-radius: 3px;	- Defined at Several elements in a Group. Point #2. */
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.ui_element .wpbc_button_as_icon {
+  border: none;
+}
+
+.ui_element .wpbc_ui_button,
+.ui_element .wpbc_ui_button-secondary {
+  color: #555;
+  border-color: #d8d8d8;
+  background: #f7f7f7;
+  vertical-align: top;
+}
+
+/* :hover  ---- */
+.ui_element .wpbc_ui_button.hover:not(.inactive),
+.ui_element .wpbc_ui_button:hover:not(.inactive),
+.ui_element .wpbc_ui_button-secondary:hover:not(.inactive) {
+  background: #fafafa;
+  border-color: #d8d8d8;
+  color: #23282d;
+  text-decoration: none;
+}
+
+.ui_element .wpbc_ui_button.hover.inactive,
+.ui_element .wpbc_ui_button.inactive:hover,
+.ui_element .wpbc_ui_button-secondary.inactive:hover {
+  cursor: default;
+}
+
+/* :focus  ---- */
+.ui_element .wpbc_ui_button.focus,
+.ui_element .wpbc_ui_button:focus,
+.ui_element .wpbc_ui_button-secondary:focus {
+  background: #fafafa;
+  border-color: #d8d8d8;
+  color: #23282d;
+  /*box-shadow: 0 0 0 1px #4f94d4, 0 0 2px 1px rgba(79, 148, 212, 0.8);		This is Default: WordPress */
+  box-shadow: 0 0 0 0px #4f94d4, 0 0 1px 1px rgba(79, 148, 212, 0.8);
+  z-index: 1;
+  text-decoration: none;
+  /* Only visible in Windows High Contrast mode */
+  outline: 2px solid transparent;
+  /* Reset inherited offset from Gutenberg */
+  outline-offset: 0;
+}
+
+/* :active  ---- */
+.wpbc_ui_dropdown.open > .wpbc_ui_button:not(.inactive),
+.ui_element .wpbc_ui_button:active:not(.inactive),
+.ui_element .wpbc_ui_button-secondary:active:not(.inactive) {
+  background: #f6f7f7;
+  border-color: #d8d8d8;
+  box-shadow: inset 0 1px 7px -3px rgba(0, 0, 0, 0.3);
+  -ms-transform: translateY(1px);
+      transform: translateY(1px);
+  outline: 0;
+  text-decoration: none;
+}
+
+/* :disabled  ---- */
+.ui_element .wpbc_ui_button:disabled,
+.ui_element .wpbc_ui_button[disabled],
+.ui_element.disabled .wpbc_ui_button,
+.ui_element .wpbc_ui_button.disabled,
+.ui_element .wpbc_ui_button-secondary[disabled],
+.ui_element .wpbc_ui_button-secondary:disabled,
+.ui_element .wpbc_ui_button-secondary.disabled,
+.ui_element .wpbc_ui_button-disabled {
+  color: #a7aaad !important;
+  border-color: #dcdcde !important;
+  background: #f6f7f7 !important;
+  box-shadow: none !important;
+  cursor: default;
+  -ms-transform: none !important;
+      transform: none !important;
+}
+
+/* .active CLASS - pressed button, pressed state e.g. a selected setting */
+.ui_element .wpbc_ui_button.active:not(.inactive),
+.ui_element .wpbc_ui_button.active:hover:not(.inactive) {
+  background: #f6f7f7;
+  border-color: #d8d8d8;
+  box-shadow: inset 0 1px 7px -3px rgba(0, 0, 0, 0.3);
+  -ms-transform: translateY(1px);
+      transform: translateY(1px);
+  outline: 0;
+  text-decoration: none;
+}
+
+.ui_element .wpbc_ui_button.active:focus:not(.inactive) {
+  border-color: #3582c4;
+  box-shadow: inset 0 1px 5px -3px #0a4b78, 0 0 1px 1px rgba(79, 148, 212, 0.1);
+}
+
+/*  2. Primary Button Style ----------------------------------------------------------------------------------------- */
+.ui_element .wpbc_ui_button_primary {
+  background: #0085ba;
+  border-color: #0073aa #006799 #006799;
+  color: #fff;
+  text-shadow: 0 -1px 1px #006799, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #006799;
+  text-decoration: none;
+  box-shadow: 0 1px 0px #f1f1f1;
+  /*background: #2271b1;*/
+  /*border-color: #2271b1;*/
+  /*color: #fff;*/
+  /*text-decoration: none;*/
+  /*text-shadow: none;*/
+}
+
+/* :hover, :focus  ---- */
+.ui_element .wpbc_ui_button_primary.hover:not(.inactive),
+.ui_element .wpbc_ui_button_primary:hover:not(.inactive),
+.ui_element .wpbc_ui_button_primary.focus:not(.inactive),
+.ui_element .wpbc_ui_button_primary:focus:not(.inactive) {
+  /*background: #135e96;*/
+  /*border-color: #135e96;*/
+  /*color: #fff;*/
+  background: #008ec2;
+  border-color: #006799;
+  color: #fff;
+}
+
+/* :focus  ---- */
+.ui_element .wpbc_ui_button_primary.focus:not(.inactive),
+.ui_element .wpbc_ui_button_primary:focus:not(.inactive) {
+  box-shadow: 0 0 0 0px #fff, 0 0 2px 1px #a4d7ff;
+}
+
+/* :active  ---- */
+.ui_element .wpbc_ui_button_primary.active:not(.inactive),
+.ui_element .wpbc_ui_button_primary.active:hover:not(.inactive),
+.ui_element .wpbc_ui_button_primary.active:focus:not(.inactive),
+.ui_element .wpbc_ui_button_primary:active:not(.inactive) {
+  background: #0c7ca8;
+  border-color: #0b79a4;
+  box-shadow: inset 0 1px 7px -3px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+/* :disabled  ---- */
+.ui_element .wpbc_ui_button_primary[disabled],
+.ui_element .wpbc_ui_button_primary:disabled,
+.ui_element .wpbc_ui_button_primary-disabled,
+.ui_element .wpbc_ui_button_primary.disabled {
+  color: #a7aaad !important;
+  background: #f6f7f7 !important;
+  border-color: #dcdcde !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  cursor: default;
+}
+
+/*  2.1 Danger (Red) Button Style ----------------------------------------------------------------------------------------- */
+.ui_element .wpbc_ui_button_danger {
+  background: #de605c;
+  border-color: #c05d5a;
+  color: #f7f7f7;
+  text-shadow: 0 0px #ba5956;
+  text-decoration: none;
+  box-shadow: 0 1px 0px #f1f1f1;
+}
+
+/* :hover, :focus  ---- */
+.ui_element .wpbc_ui_button_danger.hover:not(.inactive),
+.ui_element .wpbc_ui_button_danger:hover:not(.inactive),
+.ui_element .wpbc_ui_button_danger.focus:not(.inactive),
+.ui_element .wpbc_ui_button_danger:focus:not(.inactive) {
+  background: #e6716f;
+  border-color: #d58582;
+  color: #fdfdfd;
+  text-shadow: none;
+}
+
+/* :focus  ---- */
+.ui_element .wpbc_ui_button_danger.focus:not(.inactive),
+.ui_element .wpbc_ui_button_danger:focus:not(.inactive) {
+  box-shadow: 0 0 0 0px #fff, 0 0 2px 1px #a4d7ff;
+}
+
+/* :active  ---- */
+.ui_element .wpbc_ui_button_danger.active:not(.inactive),
+.ui_element .wpbc_ui_button_danger.active:hover:not(.inactive),
+.ui_element .wpbc_ui_button_danger.active:focus:not(.inactive),
+.ui_element .wpbc_ui_button_danger:active:not(.inactive) {
+  background: #ba4c48;
+  border-color: #c05d5a;
+  box-shadow: inset 0 1px 7px -3px rgba(0, 0, 0, 0.1);
+  color: #f3f2f2;
+}
+
+/* :disabled  ---- */
+.ui_element .wpbc_ui_button_danger[disabled],
+.ui_element .wpbc_ui_button_danger:disabled,
+.ui_element .wpbc_ui_button_danger-disabled,
+.ui_element .wpbc_ui_button_danger.disabled {
+  color: #a7aaad !important;
+  background: #f6f7f7 !important;
+  border-color: #dcdcde !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  cursor: default;
+}
+
+@media (max-width: 782px) {
+  .ui_element .in-button-text {
+    display: none;
+  }
+}
+
+/* 3.1 Text  --------------------------------------------------------------------------------------------------------- */
+.ui_element .wpbc_ui_text {
+  border: 1px solid #d6d6d6;
+  -ms-flex: 1 1 120px;
+      flex: 1 1 120px;
+}
+
+/* :focus  ---- */
+.ui_element .wpbc_ui_text.focus,
+.ui_element .wpbc_ui_text:focus {
+  border-color: #2271b1;
+  box-shadow: 0 0 0 1px #2271b1;
+  border-color: #d8d8d8;
+  /*box-shadow: 0 0 0 1px #4f94d4, 0 0 2px 1px rgba(79, 148, 212, 0.8);		This is Default: WordPress */
+  box-shadow: 0 0 0 0px #4f94d4, 0 0 1px 1px rgba(79, 148, 212, 0.8);
+  z-index: 1;
+  /* Only visible in Windows High Contrast mode */
+  outline: 2px solid transparent;
+}
+
+/* 3.2 Select-box   ------------------------------------------------------------------------------------------------- */
+.ui_element .wpbc_ui_select {
+  border: 1px solid #d6d6d6;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+}
+
+/* :focus  ---- */
+.ui_element .wpbc_ui_select.focus,
+.ui_element .wpbc_ui_select:focus {
+  border-color: #2271b1;
+  box-shadow: 0 0 0 1px #2271b1;
+  border-color: #d8d8d8;
+  /*box-shadow: 0 0 0 1px #4f94d4, 0 0 2px 1px rgba(79, 148, 212, 0.8);		This is Default: WordPress */
+  box-shadow: 0 0 0 0px #4f94d4, 0 0 1px 1px rgba(79, 148, 212, 0.8);
+  z-index: 1;
+  /* Only visible in Windows High Contrast mode */
+  outline: 2px solid transparent;
+}
+
+/* 3.3 Check-box  &  Radio  ----------------------------------------------------------------------------------------- */
+.ui_element .wpbc_ui_checkbox,
+.ui_element .wpbc_ui_radio {
+  border: 1px solid #bcbcbc;
+  border-radius: 4px;
+  background: #fff;
+  color: #50575e;
+  clear: none;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 0 !important;
+  height: 1rem !important;
+  margin: -0.25rem 0.25rem 0 0;
+  outline: 0;
+  padding: 0 !important;
+  text-align: center;
+  vertical-align: middle;
+  width: 1rem;
+  min-width: 1rem;
+  -webkit-appearance: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: .05s border-color ease-in-out;
+  margin: 0;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.ui_element .wpbc_ui_radio {
+  border-radius: 50%;
+  margin-right: 0.25rem;
+  line-height: 0.71428571;
+}
+
+/* :focus  ---- */
+.ui_element .wpbc_ui_checkbox.focus,
+.ui_element .wpbc_ui_checkbox:focus,
+.ui_element .wpbc_ui_radio.focus,
+.ui_element .wpbc_ui_radio:focus {
+  border-color: #2271b1;
+  box-shadow: 0 0 0 1px #2271b1;
+  border-color: #d8d8d8;
+  /*box-shadow: 0 0 0 1px #4f94d4, 0 0 2px 1px rgba(79, 148, 212, 0.8);		This is Default: WordPress */
+  box-shadow: 0 0 0 0px #4f94d4, 0 0 1px 1px rgba(79, 148, 212, 0.8);
+  z-index: 1;
+  /* Only visible in Windows High Contrast mode */
+  outline: 2px solid transparent !important;
+}
+
+.ui_element .wpbc_ui_radio + .wpbc_ui_control_label,
+.ui_element .wpbc_ui_checkbox + .wpbc_ui_control_label {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* If radio button  inside of the "button" element (border bounded),  then  need to center vertical position */
+.ui_element .wpbc_ui_control.wpbc_ui_button .wpbc_ui_radio + .wpbc_ui_control_label,
+.ui_element .wpbc_ui_control.wpbc_ui_button .wpbc_ui_checkbox + .wpbc_ui_control_label {
+  margin: 0;
+}
+
+@media screen and (max-width: 782px) {
+  .ui_element .wpbc_ui_checkbox,
+  .ui_element .wpbc_ui_radio {
+    height: 1.5625rem !important;
+    width: 1.5625rem;
+  }
+}
+
+/* 3.3.5 Toggle elements,  instead of checkboxes   ------------------------------------------------------------------ */
+.wpbc_ui__toggle {
+  -ms-flex-align: start;
+      align-items: flex-start;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.wpbc_ui__toggle input[type=checkbox] {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+.wpbc_ui__toggle input[type=checkbox]:checked + label.wpbc_ui__toggle_icon {
+  background-color: #036aab;
+}
+
+.wpbc_ui__toggle input[type=checkbox]:checked + label.wpbc_ui__toggle_icon:after {
+  left: calc( 100% - 13px - 2px);
+}
+
+.wpbc_ui__toggle span,
+.wpbc_ui__toggle label {
+  -ms-flex-align: start;
+      align-items: flex-start;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  vertical-align: unset;
+}
+
+.wpbc_ui__toggle .wpbc_ui__toggle_label:hover {
+  cursor: pointer;
+}
+
+.wpbc_ui__toggle .wpbc_ui__toggle_status {
+  color: #86919e;
+  font-size: 12px;
+  line-height: 14px;
+  margin: 2px 5px;
+}
+
+.wpbc_ui__toggle .wpbc_ui__toggle_icon {
+  background-color: #bbbbbb;
+  border-radius: 8.5px;
+  cursor: pointer;
+  display: inline-block;
+  height: 17px;
+  margin: 0 1px;
+  position: relative;
+  text-indent: -9999px;
+  width: 27px;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+}
+
+.wpbc_ui__toggle .wpbc_ui__toggle_icon:after {
+  background: #ffffff;
+  border-radius: 50%;
+  content: "";
+  height: 13px;
+  left: 2px;
+  position: absolute;
+  top: 2px;
+  width: 13px;
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-out;
+}
+
+.wpbc_ui__toggle .wpbc-help-tooltip {
+  margin: 0 !important;
+}
+
+.wpbc_ui__toggle:hover input:checked + label.wpbc_ui__toggle_icon {
+  background-color: #215d8f;
+}
+
+.wpbc_ui__toggle:hover .wpbc_ui__toggle_icon {
+  background-color: #777777;
+}
+
+/* Fix compatibility for toggle */
+.wpbc_ui__toggle:hover input:disabled + label.wpbc_ui__toggle_icon,
+.wpbc_ui__toggle input[type=checkbox]:disabled + label.wpbc_ui__toggle_icon {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.wpbc_ui__toggle input[type=checkbox]:checked:disabled + label.wpbc_ui__toggle_icon {
+  background-color: #c9dbe6;
+}
+
+.ui_element .wpbc_ui__toggle {
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.wpbc_ajx_toolbar .ui_container.ui_container_small .ui_group .ui_element .wpbc_ui__toggle > * {
+  margin: 0;
+}
+
+/* Fix compatibility for toggle - Settings Tables */
+.form-table td fieldset .wpbc_ui__toggle {
+  margin: 5px 0;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.form-table td fieldset .wpbc_ui__toggle input[type=checkbox] + label.wpbc_ui__toggle_icon {
+  margin: 3px 0 0.5em !important;
+}
+
+.form-table td fieldset .wpbc_ui__toggle label {
+  line-height: 1.6;
+  /*display:flex;*/
+  /*justify-content:center;*/
+  /*align-items:center;*/
+  margin: 0 1px !important;
+}
+
+.wpbc_ui__toggle input[type=checkbox].wpbc_visible_but_out_screen {
+  display: block;
+  visibility: hidden;
+  position: absolute;
+}
+
+/* Red toggle */
+.wpbc_toggle_danger.wpbc_ui__toggle input[type=checkbox]:checked + label.wpbc_ui__toggle_icon {
+  background-color: #d63638;
+}
+
+.wpbc_toggle_danger.wpbc_ui__toggle:hover input:checked + label.wpbc_ui__toggle_icon {
+  background-color: #d63638;
+}
+
+/* 3.4. Addon  ------------------------------------------------------------------------------------------------------ */
+.ui_element .wpbc_ui_addon {
+  -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: stretch;
+      justify-content: stretch;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+/* 3.5 Labels  ------------------------------------------------------------------------------------------------------ */
+.ui_element label.wpbc_ui_control_label {
+  -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 0 5px 2px 0;
+  padding-bottom: 1px;
+}
+
+.ui_element label.wpbc_ui_control_label + .wpbc_ui_control:first-of-type {
+  border-top-left-radius: 3px !important;
+  border-bottom-left-radius: 3px !important;
+}
+
+/* 3.6. Separator  ------------------------------------------------------------------------------------------------------ */
+.ui_element .wpbc_ui_separtor {
+  -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: stretch;
+      justify-content: stretch;
+  -ms-flex-align: center;
+      align-items: center;
+  border-right: 1px solid #ccc;
+}
+
+/* 3.7. Horizontal Text Bar  ------------------------------------------------------------------------------------------------------ */
+.ui_element .wpbc_option_separator,
+.ui_element .wpbc_option_step {
+  padding-right: 10px;
+  padding-left: 10px;
+  font-weight: 600;
+  border-bottom: 4px solid transparent;
+  padding-bottom: 9px;
+  margin-bottom: -9px;
+}
+
+.ui_element .wpbc_passed_step {
+  border-bottom: 4px solid #d0d3c0;
+  /*border-bottom: 4px solid #c8c0b7;*/
+}
+
+.ui_element .wpbc_selected_step {
+  border-bottom: 4px solid #aac71e;
+  /*border-bottom: 4px solid #c7751e;*/
+}
+
+/**********************************************************************************************************************/
+/* 4. Dropdown List    																								  */
+/**********************************************************************************************************************/
+.ui_element .wpbc_ui_dropdown__outside_label {
+  -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 0 10px 2px 0;
+  padding-bottom: 1px;
+}
+
+.ui_element .wpbc_ui_dropdown {
+  -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+  position: relative;
+}
+
+.ui_element .wpbc_ui_dropdown * {
+  box-sizing: border-box;
+}
+
+.ui_element .wpbc_ui_dropdown .wpbc_ui_dropdown__inside_label {
+  font-weight: 600;
+  margin: 0;
+  padding: 0 0.5em 0 0;
+}
+
+.ui_element .wpbc_ui_dropdown .wpbc_ui_dropdown__inside_caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 7px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid \9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+/* ---------------------------------------------------------------------------------------------------------- */
+/* BORDER RADIUS */
+/* ---------------------------------------------------------------------------------------------------------- */
+.ui_element .wpbc_ui_dropdown:last-child > .wpbc_ui_button:last-of-type {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+/* In case, if have several elements in .ui_element (like "button dropdown button"), - make borders not round */
+/* Left border not round */
+.ui_element .wpbc_ui_dropdown:not(:first-child) > .wpbc_ui_button:first-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Right border not round */
+.ui_element .wpbc_ui_dropdown:not(:last-child) > .wpbc_ui_button:last-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* If we have outside label, then we need to make left border round */
+.ui_element .wpbc_ui_dropdown__outside_label + .wpbc_ui_dropdown > .wpbc_ui_button:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------- */
+/* OPTIONS   (Drop Down Menu)   in Dropdown List */
+/* ---------------------------------------------------------------------------------------------------------- */
+/* Complex OPTION  - this option include some INPUT elements --------------- */
+.wpbc_ui_dropdown .ui_dropdown_menu li.ui_complex_option_element {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: center;
+      align-items: center;
+  margin: 0;
+  padding: 0 15px;
+}
+
+.wpbc_ui_dropdown ul.ui_dropdown_menu li.ui_complex_option_element .ui_element {
+  -ms-flex: 0 1 50%;
+      flex: 0 1 50%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: center;
+      align-items: center;
+  margin: 0;
+  padding: 4px 0;
+}
+
+.wpbc_ui_dropdown ul.ui_dropdown_menu li.ui_complex_option_element .ui_element > * {
+  -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+  margin: 0;
+  height: auto;
+  max-width: 210px;
+}
+
+/* ---------------------------- General backdrop --------------------------- */
+.ui_element .wpbc_ui_dropdown .ui_dropdown_menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+  background-color: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 3px 3px;
+  background-clip: padding-box;
+}
+
+.ui_element .wpbc_ui_dropdown .ui_dropdown_menu-right {
+  left: auto;
+  right: 0;
+}
+
+.ui_element .wpbc_ui_dropdown ul.ui_dropdown_menu * {
+  font-size: 13px;
+}
+
+@media screen and (max-width: 782px) {
+  .ui_element .wpbc_ui_dropdown ul.ui_dropdown_menu * {
+    font-size: 14px;
+    line-height: 2em;
+  }
+}
+
+/* ---------------------------- Open --------------------------------------- */
+.ui_element .wpbc_ui_dropdown.open > .ui_dropdown_menu {
+  display: block;
+}
+
+/* ---------------------------- Align: left | right ------------------------ */
+.ui_element .wpbc_ui_dropdown .ui_dropdown_menu.pull-right,
+.ui_element .wpbc_ui_dropdown .ui_dropdown_menu.ui_dropdown_menu_right {
+  left: auto;
+  right: 0;
+}
+
+.ui_element .wpbc_ui_dropdown .ui_dropdown_menu.ui_dropdown_menu_left {
+  left: 0;
+  right: auto;
+}
+
+/* ---------------------------- Divider ------------------------------------ */
+.ui_element .wpbc_ui_dropdown .ui_dropdown_menu hr {
+  height: 1px;
+  margin: 5px 0;
+  overflow: hidden;
+  background: none;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+}
+
+/* ---------------------------- Header ------------------------------------- */
+.wpbc_ui_dropdown .ui_dropdown_menu li.dropdown-header {
+  padding: 0 15px;
+  color: #999;
+  font-size: 0.8em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* ---------------------------- LI ----------------------------------------- */
+.wpbc_ui_dropdown .ui_dropdown_menu li {
+  padding: 0;
+  margin: 0;
+}
+
+/* ---------------------------- A ------------------------------------------ */
+.ui_element .wpbc_ui_dropdown .ui_dropdown_menu a {
+  clear: both;
+  display: block;
+  font-weight: 400;
+  padding: 5px 15px;
+  white-space: nowrap;
+  /*font-size: 13px;*/
+  line-height: 18px;
+}
+
+.ui_element .wpbc_ui_dropdown .ui_dropdown_menu > li > a {
+  color: #333333;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 5px 15px;
+  white-space: nowrap;
+  display: block;
+  clear: both;
+  font-size: 1em;
+  line-height: 1.42857143;
+}
+
+/* ---------------------------- A :hover :focus .active -------------------- */
+.ui_element .wpbc_ui_dropdown .ui_dropdown_menu > li > a:hover,
+.ui_element .wpbc_ui_dropdown .ui_dropdown_menu > li > a:focus,
+.ui_element .wpbc_ui_dropdown .ui_dropdown_menu > .active > a,
+.ui_element .wpbc_ui_dropdown .ui_dropdown_menu > .active > a:hover,
+.ui_element .wpbc_ui_dropdown .ui_dropdown_menu > .active > a:focus {
+  color: #fff;
+  background: #08c;
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* ---------------------------- .disabled  A  ------------------------------ */
+.ui_element .wpbc_ui_dropdown .ui_dropdown_menu > .disabled > a,
+.ui_element .wpbc_ui_dropdown .ui_dropdown_menu > .disabled > a:hover,
+.ui_element .wpbc_ui_dropdown .ui_dropdown_menu > .disabled > a:focus {
+  color: #ccc;
+}
+
+.ui_element .wpbc_ui_dropdown .ui_dropdown_menu > .disabled > a:hover,
+.ui_element .wpbc_ui_dropdown .ui_dropdown_menu > .disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  cursor: not-allowed;
+}
+
+.ui_element .wpbc_ui_dropdown .dropdown-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 990;
+}
+
+/**********************************************************************************************************************/
+/* 5. Several elements in a ".ui_element" group  -------------------------------------------------------------------- */
+.ui_element .wpbc_ui_control {
+  border-radius: 0;
+  border-width: 1px;
+  /*border-right-width:0;*/
+  border-right-width: 1px;
+  margin-right: -1px !important;
+}
+
+.ui_element .wpbc_ui_control:first-child {
+  border-radius: 3px 0 0 3px;
+}
+
+.ui_element .wpbc_ui_control:last-child {
+  border-radius: 0 3px 3px 0;
+  border-width: 1px;
+}
+
+.ui_element .wpbc_ui_control:first-child:last-child {
+  border-radius: 3px;
+}
+
+/**********************************************************************************************************************/
+/** Toolbar                                                                                                           */
+/**********************************************************************************************************************/
+.ui_nowrap {
+  -ms-flex-wrap: nowrap !important;
+      flex-wrap: nowrap !important;
+}
+
+/* Toolbar  --------------------------------------------------------------------------------------------------------- */
+.wpbc_ajx_toolbar {
+  position: relative;
+  margin: 0 0 10px 50px;
+}
+
+.wpbc_ajx_toolbar * {
+  box-sizing: border-box;
+}
+
+/* Row of simple buttons somewhere in a page */
+.wpbc_ajx_toolbar.wpbc_buttons_row {
+  position: initial;
+  margin: 0;
+  float: left;
+}
+
+.wpbc_ajx_toolbar.wpbc_buttons_row .ui_container {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wpbc_ajx_toolbar.wpbc_no_background .ui_container {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container  ------------------------------------------------------------------------------------------------------- */
+.wpbc_ajx_toolbar .ui_container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+  margin: 0;
+  box-shadow: none;
+  border: 1px solid #ccc;
+  border-top: none;
+  background: #f5f5f5;
+  font-size: 14px;
+  padding: 6px 15px;
+}
+
+.wpbc_ajx_toolbar .ui_container:last-child {
+  border-radius: 0 0 2px 2px;
+}
+
+/* Toolbar wthout backgound and borders, for ability to insert elements somewhere in a page ----------------------------
+ *																										//FixIn: 9.6.1.5
+				?><div class="wpbc_ajx_toolbar wpbc_no_borders"><?php
+					?><div class="ui_container ui_container_small"><?php
+						?><div class="ui_group"><?php
+							?><div class="ui_element"><?php
+								wpbc_ajx__ui__options_checkbox__send_emails( $escaped_search_request_params, wpbc_ajx_get__request_params__names_default( 'default' ) );
+							?></div><?php
+						?></div><?php
+					?></div><?php
+				?></div><?php
+ */
+.wpbc_ajx_toolbar.wpbc_no_borders .ui_container {
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+div.wpbc_ajx_toolbar.wpbc_no_borders {
+  margin: 0;
+}
+
+.wpbc_ajx_under_toolbar_row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.wpbc_ajx_under_toolbar_row .wpbc_ajx_booking_pagination {
+  margin-left: auto;
+}
+
+/* Groups in container  --------------------------------------------------------------------------------------------- */
+.wpbc_ajx_toolbar .ui_container .ui_group {
+  -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+  padding: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+  border: none;
+  margin: 0 20px 0 0;
+}
+
+.wpbc_ajx_toolbar .ui_container .ui_group:last-child {
+  margin: 0;
+}
+
+.wpbc_not_toolbar_is_send_emails {
+  border-left: 1px solid #dbdbdb;
+  padding-left: 10px;
+}
+
+/* Elements  -------------------------------------------------------------------------------------------------------- */
+.wpbc_ajx_toolbar .ui_container .ui_group .ui_element {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+  -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+  position: relative;
+  margin: 0px 15px 0px 0;
+}
+
+.wpbc_ajx_toolbar .ui_container .ui_group .ui_element:last-child {
+  margin-right: 0;
+}
+
+.wpbc_ajx_toolbar .ui_container .ui_group .ui_element > * {
+  margin: 5px 0;
+}
+
+.ui_elements_divider {
+  margin-left: 15px;
+}
+
+/**********************************************************************************************************************/
+/** Customization                                                                                                     */
+/**********************************************************************************************************************/
+.wpbc_ajx_toolbar .ui_container.ui_container_small *,
+.wpbc_ajx_toolbar .ui_container.ui_container_mini *,
+.wpbc_ajx_toolbar .ui_container.ui_container_micro * {
+  font-size: 13px;
+}
+
+.wpbc_ajx_toolbar .ui_container.ui_container_mini {
+  padding: 3px 15px;
+}
+
+@media (max-width: 782px) {
+  .wpbc_ajx_toolbar .ui_container.ui_container_small *,
+  .wpbc_ajx_toolbar .ui_container.ui_container_mini *,
+  .wpbc_ajx_toolbar .ui_container.ui_container_micro * {
+    font-size: 14px;
+  }
+}
+
+/* Elements Height  ------------------------------------------------------------------------------------------------- */
+.wpbc_ajx_toolbar .ui_container .ui_group .ui_element > * {
+  height: 38px;
+}
+
+.wpbc_ajx_toolbar .ui_container.ui_container_small .ui_group .ui_element > *,
+.wpbc_ajx_toolbar .ui_container.ui_container_mini .ui_group .ui_element > * {
+  height: 30px;
+}
+
+.wpbc_ajx_toolbar .ui_container.ui_container_micro .ui_group .ui_element > *,
+.wpbc_ajx_toolbar .ui_container .ui_group .ui_element.ui_element_micro > * {
+  height: 22px;
+  line-height: 1;
+}
+
+/* Micro Elements   ------------------------------------------------------------------------------------------------- */
+.wpbc_ajx_toolbar .ui_container .ui_group .ui_element.ui_element_micro {
+  margin-right: 5px;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.wpbc_ajx_toolbar .ui_container .ui_group .ui_element.ui_element_micro:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 782px) {
+  .wpbc_ajx_toolbar.wpbc_buttons_row .ui_container .ui_group .ui_element > *,
+  #toolbar_booking_listing.wpbc_ajx_toolbar .ui_container .ui_group .ui_element > * {
+    height: 38px;
+  }
+  .wpbc_ajx_toolbar.wpbc_buttons_row .ui_container .ui_group .ui_element > .wpbc_ui_button,
+  #toolbar_booking_listing.wpbc_ajx_toolbar .ui_container .ui_group .ui_element > .wpbc_ui_button {
+    padding: 0 15px 2px;
+    padding-bottom: 1px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+}
+
+/* Keyword   -------------------------------------------------------------------------------------------------------- */
+.wpbc_ajx_toolbar .ui_container .ui_group.ui_group__dates_status {
+  margin-right: 2.5em;
+}
+
+.wpbc_ajx_toolbar .ui_container .ui_group.ui_group__keyword {
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+}
+
+.wpbc_ajx_toolbar .ui_container .ui_group.ui_group__keyword .ui_element {
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+}
+
+.wpbc_ajx_toolbar .ui_container .ui_group.ui_group__keyword .ui_element .wpbc_search_field {
+  width: 100%;
+}
+
+/* 2nd row   -------------------------------------------------------------------------------------------------------- */
+.wpbc_ajx_toolbar .ui_container.ui_container_filter_row_2 {
+  padding: 4px 15px;
+}
+
+.wpbc_ajx_toolbar .ui_container.ui_container_filter_row_2 .ui_group.ui_group__statuses {
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+}
+
+/**********************************************************************************************************************/
+/** Booking resources 	-	Chosen
+/**********************************************************************************************************************/
+/**
+ * Choozen Structure
+
+<select multiple="MULTIPLE"...
+
+div#wh_booking_type_chosen   .chzn-container.chzn-container-multi	.chzn-with-drop.chzn-container-active (if active)
+	ul.chzn-choices
+		li.search-choice
+			<span>
+			a.search-choice-close
+
+		li.search-field
+			input[type="text"].chzn-search-input					.default (if no selected values)
+
+	div.chzn-drop
+		ul.chzn-results
+			li.result-selected	||  li.active-result  				.highlighted (if active)
+*/
+.ui_container .ui_group .ui_element .chzn-container.chzn-container-multi {
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  height: initial;
+  width: auto !important;
+  min-width: 10em;
+  margin-right: -1px;
+}
+
+@media (max-width: 782px) {
+  .ui_container .ui_group .ui_element .chzn-container.chzn-container-multi {
+    height: initial !important;
+  }
+}
+
+.ui_container .ui_group .ui_element .chzn-container.chzn-container-multi ul.chzn-choices {
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 0;
+  padding: 0 0 0 5px;
+  height: auto;
+  min-height: 28px !important;
+  border-radius: 3px 0 0 3px;
+}
+
+.ui_container .ui_group .ui_element .chzn-container.chzn-container-multi.chzn-container-active ul.chzn-choices {
+  border-color: #d8d8d8 !important;
+  box-shadow: 0 0 0 0px #4f94d4, 0 0 1px 1px rgba(79, 148, 212, 0.8) !important;
+  z-index: 1;
+  outline: 2px solid transparent;
+}
+
+.ui_container .ui_group .ui_element .chzn-container.chzn-container-multi ul.chzn-choices li.search-choice {
+  -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: baseline;
+      align-items: baseline;
+  margin: 3px 0.5em 3px 0;
+  padding: 3px 5px 3px 8px;
+}
+
+.ui_container .ui_group .ui_element .chzn-container.chzn-container-multi ul.chzn-choices li.search-choice span {
+  word-wrap: break-word;
+}
+
+.ui_container .ui_group .ui_element .chzn-container.chzn-container-multi ul.chzn-choices li.search-choice a.search-choice-close {
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 9px;
+  color: #555;
+  text-decoration: none;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  margin: 0 0 0 1em;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: auto;
+  height: auto;
+}
+
+.ui_container .ui_group .ui_element .chzn-container.chzn-container-multi ul.chzn-choices li.search-choice a.search-choice-close:before {
+  content: "\e014";
+}
+
+.ui_container .ui_group .ui_element .chzn-container.chzn-container-multi ul.chzn-choices li.search-choice a.search-choice-close:hover {
+  text-decoration: none;
+}
+
+.ui_container .ui_group .ui_element .chzn-container.chzn-container-multi ul.chzn-choices li.search-field {
+  -ms-flex: 0 1 1px;
+      flex: 0 1 1px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: center;
+      align-items: center;
+  margin: 0px 0 0px 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.ui_container .ui_group .ui_element .chzn-container.chzn-container-multi ul.chzn-choices li.search-field input[type="text"].default {
+  min-width: 12em;
+}
+
+.ui_container .ui_group .ui_element .chzn-container.chzn-container-multi ul.chzn-choices li.search-field input[type="text"] {
+  font-family: inherit;
+}
+
+.ui_container .ui_group .ui_element .chzn-container div.chzn-drop ul.chzn-results li.highlighted {
+  color: #fff;
+  background: #08c;
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/*
+#wh_booking_type_chosen {
+	width: auto !important;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: stretch;
+	flex: 1 1 auto;
+	height: initial;
+	min-width: 10em;
+}
+
+#wh_booking_type_chosen .chzn-choices {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: stretch;
+	align-items: center;
+	margin: 0px 0px;
+	padding: 0 5px;
+	min-height: auto !important;
+	flex: 1 1 auto;
+	border-radius: 3px 0 0 3px;
+}
+
+.chzn-container-multi .chzn-choices .search-choice a.search-choice-close {
+	background: none;
+	display: inline-block;
+	font-family: "Glyphicons Halflings";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 9px;
+	line-height: 1;
+	position: relative;
+	top: 0px;
+	left: 15px;
+	color: #555;
+	text-decoration: none;
+}
+	.chzn-container-multi .chzn-choices .search-choice a.search-choice-close:hover {
+		text-decoration: none;
+	}
+	.chzn-container-multi .chzn-choices .search-choice a.search-choice-close:before {
+		content: "\e014";
+	}
+
+#wh_booking_type_chosen .chzn-search-input.default {
+	min-width: 12em;
+}
+#wh_booking_type_chosen.chzn-container.chzn-container-multi.chzn-container-active .chzn-choices {
+
+	border-color: #d8d8d8 !important;
+	box-shadow: 0 0 0 0px #4f94d4, 0 0 1px 1px rgba(79, 148, 212, 0.8) !important;
+	z-index: 1;
+	outline: 2px solid transparent;
+}
+.chzn-container-multi .chzn-choices li.search-field input[type="text"] {
+	font-family: inherit;
+}
+.chzn-container .chzn-results li.highlighted {
+	color: #fff;
+	background: #08c;
+	text-decoration: none;
+	outline: none;
+	box-shadow: none;
+}
+/**/
+/**********************************************************************************************************************/
+/* Blur   ----------------------------------------------------------------------------------------------------------- */
+.wpbc_blur {
+  filter: blur(0.75px);
+  pointer-events: none;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.wpbc_upgrade_note {
+  position: absolute;
+  top: 50%;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #D1D1D1;
+  box-shadow: 0 3px 10px #5e5e5e33;
+  color: #141b38;
+  font-size: 15px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  line-height: 2em;
+}
+
+.wpbc_upgrade_note a {
+  text-decoration: none;
+  border-bottom: 1px dashed;
+}
+
+.wpbc_upgrade_note a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+/*[dir=ltr]*/
+.wpbc_upgrade_note {
+  left: 50%;
+  -ms-transform: translate(-50%) translateY(-50%);
+      transform: translate(-50%) translateY(-50%);
+}
+
+/*
+[dir=rtl] .wpbc_upgrade_note {
+	right: 50%;
+	transform: translate(50%) translateY(-50%)
+}*/
+.wpbc_upgrade_note.wpbc_upgrade_theme_green {
+  width: 70%;
+  height: 4em;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  border: 3px solid #5e9b05bd;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+/* Big Green  Upgrade Widget Container : 2024-03-14 */
+.wpbc_upgrade_widget {
+  -ms-transform: translate(0) translateY(0);
+      transform: translate(0) translateY(0);
+  position: relative;
+  z-index: 999;
+}
+
+.wpbc_upgrade_widget .wpbc_upgrade_widget_container {
+  background: #fff;
+  position: relative;
+}
+
+.wpbc_upgrade_widget .wpbc_upgrade_widget_container .wpbc_upgrade_note {
+  width: 70%;
+  height: auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.wpbc_upgrade_widget .wpbc_upgrade_widget_container .wpbc_upgrade_note div:first-child {
+  margin: auto;
+}
+
+.wpbc_upgrade_widget .wpbc_upgrade_widget_container .wpbc_upgrade_note .wpbc_panel_get_started_dismiss {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: auto;
+  padding: 4px 10px;
+  text-decoration: none;
+  font-weight: 600;
+  background: #fff;
+  border-radius: 7px;
+  border: none;
+}

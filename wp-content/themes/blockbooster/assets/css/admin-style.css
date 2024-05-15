@@ -1,0 +1,251 @@
+.blockbooster-admin-notice {
+  padding: 0 30px;
+}
+.blockbooster-admin-notice .info-content h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: #2271b1;
+}
+.blockbooster-admin-notice .info-content h1 {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 26px;
+  text-transform: capitalize;
+  margin: 5px 0 !important;
+}
+.blockbooster-admin-notice #install-activate-button {
+  background-color: #2271b1;
+  color: #fff;
+}
+.blockbooster-admin-notice #install-activate-button:hover,
+.blockbooster-admin-notice .button.admin-button.info-button:hover {
+  background: #135e96;
+  border-color: #135e96;
+  color: #fff;
+}
+.blockbooster-admin-notice .button.admin-button.info-button {
+  background: #2271b1;
+  color: #ffffff;
+  padding: 3px 10px;
+  font-weight: 600;
+  border-radius: 0;
+}
+.blockbooster-admin-notice .admin-button.dismiss-notice.btn-notice-dismiss {
+  color: #a4a4a7;
+  display: inline-block;
+  margin: 15px;
+}
+.blockbooster-admin-notice .admin-button.dismiss-notice.btn-notice-dismiss:hover {
+  color: #d63638;
+}
+.blockbooster-admin-notice .notice-text {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 20px;
+  font-size: 14px;
+}
+.dashboard-about-blockbooster {
+  padding: 30px;
+  background: #fff;
+  box-sizing: border-box;
+  width: 98.5%;
+  margin: 20px 0 0 0;
+}
+.dashboard-about-blockbooster .half-col {
+  width: 50%;
+  display: inline-block;
+}
+
+.dashboard-about-blockbooster .featured-list {
+  display: flex;
+  grid-gap: 30px;
+}
+.dashboard-about-blockbooster .half-col ul ul {
+  margin: 10px 0 20px;
+  padding: 0 0 0 30px;
+}
+.dashboard-about-blockbooster .half-col ul ul li,
+.dashboard-about-blockbooster .half-col.pro-features li {
+  position: relative;
+}
+.dashboard-about-blockbooster .half-col ul ul li:before,
+.dashboard-about-blockbooster .half-col.pro-features li:before {
+  content: "\2713";
+  background: #bdbfc2;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  left: -20px;
+  top: 2px;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  border-radius: 20px;
+  color: #fff;
+}
+.dashboard-about-blockbooster .half-col.pro-features li {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.dashboard-about-blockbooster .half-col.pro-features li:before {
+  background: #04cf9c;
+}
+.dashboard-about-blockbooster .half-col.pro-features ul {
+  margin: 0;
+  padding: 0 0 0 18px;
+}
+
+.dashboard-about-blockbooster .upgrade-btn.button {
+  text-transform: uppercase;
+  background: #4261ee;
+  border-color: #4261ee;
+  color: #fff;
+  display: inline-block;
+  margin-top: 21px;
+  padding: 10px 24px;
+}
+.dashboard-about-blockbooster .upgrade-btn.button:hover {
+  background: #f39446;
+  border-color: #f39446;
+}
+.blockbooster-admin-notice .info-content h3,
+.dashboard-about-blockbooster h3,
+.blockbooster-admin-notice .info-content .blockbooster-required-plugin li h4,
+.dashboard-about-blockbooster .blockbooster-required-plugin li h4 {
+  margin: 0;
+}
+
+.blockbooster-admin-notice .info-content .blockbooster-required-plugin li,
+.dashboard-about-blockbooster .blockbooster-required-plugin li {
+  margin: 5px 0;
+}
+.blockbooster-admin-notice .info-content .blockbooster-required-plugin,
+.dashboard-about-blockbooster .blockbooster-required-plugin {
+  margin: 10px 0 30px;
+}
+.dashboard-about-blockbooster .blockbooster-baisc-guideline {
+  margin: 20px 0;
+  display: inline-block;
+  width: 100%;
+}
+.dashboard-about-blockbooster .blockbooster-baisc-guideline .featured-box {
+  padding: 15px 0;
+  border-bottom: 1px solid #ededed;
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+}
+.dashboard-about-blockbooster h3.blockbooster-baisc-guideline-header {
+  width: 100%;
+  display: inline-block;
+  margin: 20px 0 0;
+}
+.dashboard-about-blockbooster .blockbooster-baisc-guideline .featured-box li strong {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.dashboard-about-blockbooster h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.blockbooster-admin-notice {
+  display: flex;
+}
+.blockbooster-admin-notice .info-content {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.blockbooster-admin-notice .theme-hero-screens {
+  text-align: right;
+  width: 50%;
+}
+.blockbooster-admin-notice .theme-hero-screens img {
+  max-width: 85%;
+  margin: -10px 0 -22px;
+}
+.dashboard-about-blockbooster p {
+  font-size: 16px;
+}
+.blockbooster-dashboard #blockbooster-dashboard-tabs-nav {
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 3px;
+}
+.blockbooster-dashboard #blockbooster-dashboard-tabs-nav li {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  position: relative;
+}
+
+.blockbooster-dashboard #blockbooster-dashboard-tabs-nav li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  color: #101010;
+  border-radius: 0;
+  display: inline-block;
+  border-radius: 0;
+  transition: ease all 0.23s;
+  background: #ededed;
+}
+.blockbooster-dashboard #blockbooster-dashboard-tabs-nav li a:hover {
+  color: #574be8;
+}
+.blockbooster-dashboard #blockbooster-dashboard-tabs-nav li.active a {
+  background: #574be8;
+  color: #ffffff;
+}
+.blockbooster-dashboard #tabs-content {
+  padding: 20px 0;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.blockbooster-admin-notice.notice.notice-info .info-content .admin-button.info-button.processing-spinner {
+  padding-right: 50px;
+  position: relative;
+}
+/*processing-spinner*/
+.blockbooster-admin-notice.notice.notice-info .info-content .admin-button.info-button.processing-spinner:before {
+  content: "";
+  right: 5px;
+  top: 5px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #574be8;
+  display: inline-block;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: processingLocader 1s ease-in infinite;
+}
+@keyframes processingLocader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+.installing-all-pluign.info-button {
+  background: #2271b1;
+  margin: 0 0 40px;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 12px;
+  font-size: 18px;
+}

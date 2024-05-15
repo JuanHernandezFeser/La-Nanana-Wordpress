@@ -1,0 +1,53 @@
+.wpbc-bottom-pagination{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+	align-items: stretch;
+}
+.wpbc-ajax-pagination_items_per_page,
+.wpbc-ajax-pagination-container {
+	display:flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: stretch;
+
+	margin: 0;
+}
+.wpbc-ajax-pagination_items_per_page{
+	margin-left: 1em;
+	margin-top: -1px;
+}
+.wpbc-ajax-pagination_items_per_page .ui_element,
+.wpbc-ajax-pagination .ui_element {
+	flex: 0 0 auto;
+}
+.wpbc-ajax-pagination .ui_element > .wpbc_ui_button {
+	height: 30px;
+	margin: 5px 5px;
+	padding: 0 14px;
+}
+.wpbc-ajax-pagination_items_per_page .ui_element > * {
+	height: 30px;
+	margin: 6px 5px;
+}
+
+.wpbc-ajax-pagination .ui_element .wpbc_ui_button.active:not(.inactive),
+.wpbc-ajax-pagination .ui_element .wpbc_ui_button.active:hover:not(.inactive) {
+	transform: none;
+}
+@media (max-width: 782px) {
+
+	.wpbc-bottom-pagination .wpbc-ajax-pagination-container .ui_element > *,
+	.wpbc-bottom-pagination .wpbc-ajax-pagination_items_per_page .ui_element > * {
+		height: 38px;
+	}
+	.wpbc-bottom-pagination .wpbc-ajax-pagination-container .ui_element > .wpbc_ui_button,
+	.wpbc-bottom-pagination .wpbc-ajax-pagination_items_per_page .ui_element > .wpbc_ui_button {
+		padding: 0 15px 2px;
+		padding-bottom: 1px;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+	}
+}

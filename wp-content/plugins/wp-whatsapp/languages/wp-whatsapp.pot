@@ -1,0 +1,796 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WhatsApp Chat by NinjaTeam\n"
+"POT-Creation-Date: 2024-03-19 16:39+0700\n"
+"PO-Revision-Date: 2020-11-17 14:11+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: whatsapp.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+"X-Poedit-SearchPathExcluded-2: Documentation\n"
+"X-Poedit-SearchPathExcluded-3: release\n"
+"X-Poedit-SearchPathExcluded-4: .vscode\n"
+"X-Poedit-SearchPathExcluded-5: apps\n"
+"X-Poedit-SearchPathExcluded-6: blocks/node_modules\n"
+"X-Poedit-SearchPathExcluded-7: assets\n"
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/block.js:22
+msgid "WhatsApp Button"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/block.js:25
+msgid "ninjateam"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/block.js:25
+msgid "whatsapp"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/block.js:25
+msgid "nta"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/block.js:25
+msgid "wa"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/edit.js:165
+msgid "Select Account"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/edit.js:167
+msgid "Choose your account from list:"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/edit.js:141
+msgid "Custom Button"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/edit.js:175
+msgid "Enter your phone number:"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/edit.js:186
+#: includes/PostType.php:51
+msgid "Avatar (PRO)"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/edit.js:190
+#: views/meta-button-style.php:17
+msgid "Button Style"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/edit.js:196
+#: views/meta-button-style.php:22
+msgid "Round"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/edit.js:197
+#: views/meta-button-style.php:25
+msgid "Square"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/edit.js:206
+msgid "Button Color"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/edit.js:211
+msgid "Background Color"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/edit.js:217
+msgid "Text Color"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/media-select.js:40
+msgid "Choose an image"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/media-select.js:57
+#: blocks/src/block/media-select.js:63
+msgid "Replace image"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/media-select.js:72
+msgid "Remove image"
+msgstr ""
+
+#: blocks/dist/blocks.build.js:1 blocks/src/block/button-render.js:43
+#: includes/I18n.php:22 views/meta-button-style.php:73
+msgid "Online"
+msgstr ""
+
+#: blocks/src/block/button-render.js:43 includes/I18n.php:23
+msgid "Offline"
+msgstr ""
+
+#: includes/Cross.php:125
+msgid "Recommend"
+msgstr ""
+
+#: includes/Fallback.php:11
+msgid ""
+"It looks like you have another WhatsApp version installed, please delete it "
+"before activating this new version. All of the settings and data are still "
+"preserved."
+msgstr ""
+
+#: includes/Fallback.php:13
+msgid "Read more details."
+msgstr ""
+
+#: includes/Fields.php:32 includes/Upgrade.php:221
+msgid "Need Help? Chat with us"
+msgstr ""
+
+#: includes/Fields.php:73
+msgid "Start a Conversation"
+msgstr ""
+
+#: includes/Fields.php:74
+msgid "The team typically replies in a few minutes."
+msgstr ""
+
+#: includes/Fields.php:75
+msgid "Hi! Click one of our member below to chat on <strong>WhatsApp</strong>"
+msgstr ""
+
+#: includes/Fields.php:87
+msgid "Need Help? <strong>Chat with us</strong>"
+msgstr ""
+
+#: includes/Fields.php:96
+msgid ""
+"Please accept our <a href=\"https://ninjateam.org/privacy-policy/\">privacy "
+"policy</a> first to start a conversation."
+msgstr ""
+
+#: includes/Fields.php:125
+msgid "I will be back in [njwa_time_work]"
+msgstr ""
+
+#: includes/Fields.php:126
+msgid "I will be back soon"
+msgstr ""
+
+#: includes/Helper.php:24
+msgid "Always online"
+msgstr ""
+
+#: includes/Helper.php:29
+msgid "Sunday"
+msgstr ""
+
+#: includes/Helper.php:30
+msgid "Monday"
+msgstr ""
+
+#: includes/Helper.php:31
+msgid "Tuesday"
+msgstr ""
+
+#: includes/Helper.php:32
+msgid "Wednesday"
+msgstr ""
+
+#: includes/Helper.php:33
+msgid "Thursday"
+msgstr ""
+
+#: includes/Helper.php:34
+msgid "Friday"
+msgstr ""
+
+#: includes/Helper.php:35
+msgid "Saturday"
+msgstr ""
+
+#: includes/PostType.php:42
+msgid "WhatsApp Accounts"
+msgstr ""
+
+#: includes/PostType.php:43
+msgid "Whatsapp Account"
+msgstr ""
+
+#: includes/PostType.php:44 includes/PostType.php:45
+msgid "Add New Account"
+msgstr ""
+
+#: includes/PostType.php:46
+msgid "Edit Account"
+msgstr ""
+
+#: includes/PostType.php:47
+msgid "New Account"
+msgstr ""
+
+#: includes/PostType.php:48
+msgid "All Accounts"
+msgstr ""
+
+#: includes/PostType.php:49
+msgid "View Accounts"
+msgstr ""
+
+#: includes/PostType.php:50
+msgid "Search Account"
+msgstr ""
+
+#: includes/PostType.php:52
+msgid "Select an image"
+msgstr ""
+
+#: includes/PostType.php:53
+msgid "Remove avatar"
+msgstr ""
+
+#: includes/PostType.php:58
+msgid "Manager Accounts"
+msgstr ""
+
+#: includes/PostType.php:262 views/design-settings.php:60
+msgid "Account Name"
+msgstr ""
+
+#: includes/PostType.php:263
+msgid "Avatar"
+msgstr ""
+
+#: includes/PostType.php:264
+msgid "Number"
+msgstr ""
+
+#: includes/PostType.php:265 views/design-settings.php:44
+#: views/meta-accounts.php:23
+msgid "Title"
+msgstr ""
+
+#: includes/PostType.php:266
+msgid "Active Days"
+msgstr ""
+
+#: includes/PostType.php:267
+msgid "Shortcode"
+msgstr ""
+
+#: includes/Recommended/Recommended.php:155
+#: includes/Recommended/Recommended.php:245
+#: includes/Recommended/Recommended.php:553
+msgid "Recommended Plugins"
+msgstr ""
+
+#: includes/Recommended/Recommended.php:294
+#: includes/Recommended/Recommended.php:342
+#: includes/Recommended/Recommended.php:390
+msgid "Nonce is invalid"
+msgstr ""
+
+#: includes/Recommended/Recommended.php:311
+msgid "Get data success"
+msgstr ""
+
+#: includes/Recommended/Recommended.php:319
+#: includes/Recommended/Recommended.php:363
+#: includes/Recommended/Recommended.php:473
+msgid "Error exception."
+msgstr ""
+
+#: includes/Recommended/Recommended.php:328
+#: includes/Recommended/Recommended.php:372
+#: includes/Recommended/Recommended.php:482
+msgid "Error."
+msgstr ""
+
+#: includes/Recommended/Recommended.php:356
+msgid "Activate success"
+msgstr ""
+
+#: includes/Recommended/Recommended.php:439
+msgid "Install success"
+msgstr ""
+
+#: includes/Recommended/Recommended.php:463
+msgid "Update success"
+msgstr ""
+
+#. translators: %s: Plugin name and version.
+#: includes/Recommended/views/content.php:65
+#, php-format
+msgctxt "plugin"
+msgid "Install %s now"
+msgstr ""
+
+#: includes/Recommended/views/content.php:66
+msgid "Install Now"
+msgstr ""
+
+#: includes/Recommended/views/content.php:71
+msgctxt "plugin"
+msgid "Cannot Install"
+msgstr ""
+
+#. translators: %s: Plugin name and version.
+#: includes/Recommended/views/content.php:87
+#, php-format
+msgctxt "plugin"
+msgid "Update %s now"
+msgstr ""
+
+#: includes/Recommended/views/content.php:89
+msgid "Update Now"
+msgstr ""
+
+#: includes/Recommended/views/content.php:94
+msgctxt "plugin"
+msgid "Cannot Update"
+msgstr ""
+
+#: includes/Recommended/views/content.php:111
+msgctxt "plugin"
+msgid "Activated"
+msgstr ""
+
+#: includes/Recommended/views/content.php:116
+msgid "Activate"
+msgstr ""
+
+#. translators: %s: Plugin name.
+#: includes/Recommended/views/content.php:118
+#, php-format
+msgctxt "plugin"
+msgid "Activate %s"
+msgstr ""
+
+#: includes/Recommended/views/content.php:129
+msgid "Network Activate"
+msgstr ""
+
+#. translators: %s: Plugin name.
+#: includes/Recommended/views/content.php:131
+#, php-format
+msgctxt "plugin"
+msgid "Network Activate %s"
+msgstr ""
+
+#: includes/Recommended/views/content.php:144
+msgctxt "plugin"
+msgid "Cannot Activate"
+msgstr ""
+
+#: includes/Recommended/views/content.php:150
+msgctxt "plugin"
+msgid "Installed"
+msgstr ""
+
+#: includes/Recommended/views/content.php:180
+msgid "This plugin doesn&#8217;t work with your versions of WordPress and PHP."
+msgstr ""
+
+#. translators: 1: URL to WordPress Updates screen, 2: URL to Update PHP page.
+#: includes/Recommended/views/content.php:184
+#, php-format
+msgid ""
+"<a href=\"%1$s\">Please update WordPress</a>, and then <a "
+"href=\"%2$s\">learn more about updating PHP</a>."
+msgstr ""
+
+#. translators: %s: URL to WordPress Updates screen.
+#: includes/Recommended/views/content.php:192
+#: includes/Recommended/views/content.php:208
+#, php-format
+msgid "<a href=\"%s\">Please update WordPress</a>."
+msgstr ""
+
+#. translators: %s: URL to Update PHP page.
+#: includes/Recommended/views/content.php:198
+#: includes/Recommended/views/content.php:217
+#, php-format
+msgid "<a href=\"%s\">Learn more about updating PHP</a>."
+msgstr ""
+
+#: includes/Recommended/views/content.php:204
+msgid "This plugin doesn&#8217;t work with your version of WordPress."
+msgstr ""
+
+#: includes/Recommended/views/content.php:213
+msgid "This plugin doesn&#8217;t work with your version of PHP."
+msgstr ""
+
+#: includes/Review.php:77
+msgid "Rate now"
+msgstr ""
+
+#: includes/Review.php:78
+msgid "Later"
+msgstr ""
+
+#: includes/Review.php:79
+msgid "No, thanks"
+msgstr ""
+
+#: includes/Settings.php:63 includes/Settings.php:90
+msgid "Settings"
+msgstr ""
+
+#: includes/Settings.php:66 includes/Settings.php:94
+msgid "Go Pro"
+msgstr ""
+
+#: includes/Settings.php:74
+msgid "Documentation"
+msgstr ""
+
+#: includes/Settings.php:88
+msgid "Add New account"
+msgstr ""
+
+#: includes/Settings.php:89
+msgid "Floating Widget"
+msgstr ""
+
+#: includes/Settings.php:200
+msgid "Select posts to display the widget"
+msgstr ""
+
+#: includes/Upgrade.php:72
+msgid "Please contact us! we can't restore your accounts!"
+msgstr ""
+
+#: includes/Upgrade.php:77
+msgid "Restored Successfully!"
+msgstr ""
+
+#: includes/Upgrade.php:84
+msgid "WhatsApp database update required"
+msgstr ""
+
+#: includes/Upgrade.php:87
+msgid ""
+"WhatsApp has been updated! To use the latest version, you have to update "
+"your database to make your WhatsApp accounts work correctly."
+msgstr ""
+
+#: includes/Upgrade.php:90
+msgid "Update WhatsApp Database"
+msgstr ""
+
+#: views/analytics.php:1
+msgid ""
+"Enable WhatsApp trackers to monitor your WhatsApp widget, button and other "
+"guest activities."
+msgstr ""
+
+#: views/analytics.php:5
+msgid "Google Analytics (PRO)"
+msgstr ""
+
+#: views/analytics.php:11
+msgid ""
+"Gain insights of WhatsApp tracking in Google Analytics > Behavior > Events"
+msgstr ""
+
+#: views/analytics.php:21
+msgid "Please enable this feature if your website is using Google Analytics 4"
+msgstr ""
+
+#: views/analytics.php:25
+msgid "Facebook Pixel (PRO)"
+msgstr ""
+
+#: views/analytics.php:31
+msgid "Access Facebook for Business and view recorded events in Event Manager"
+msgstr ""
+
+#: views/analytics.php:36 views/design-settings.php:182
+#: views/display-settings.php:105 views/url-settings.php:43
+#: views/woocommerce-button.php:79
+msgid "Save Changes"
+msgstr ""
+
+#: views/design-settings.php:2 views/display-settings.php:2
+msgid "Setting text and style for the floating widget."
+msgstr ""
+
+#: views/design-settings.php:5
+msgid "Widget Text"
+msgstr ""
+
+#: views/design-settings.php:10
+msgid "Show Widget Label"
+msgstr ""
+
+#: views/design-settings.php:20
+msgid "Widget Label Text"
+msgstr ""
+
+#: views/design-settings.php:25
+msgid "Widget Label Width(px)"
+msgstr ""
+
+#: views/design-settings.php:36
+msgid "Widget Text Color"
+msgstr ""
+
+#: views/design-settings.php:41
+msgid "Widget Font Size"
+msgstr ""
+
+#: views/design-settings.php:52 views/design-settings.php:162
+msgid "Description"
+msgstr ""
+
+#: views/design-settings.php:68
+msgid "Regular Text"
+msgstr ""
+
+#: views/design-settings.php:79
+msgid "Widget Background Color"
+msgstr ""
+
+#: views/design-settings.php:83
+msgid "Widget Position"
+msgstr ""
+
+#: views/design-settings.php:88
+msgid "Left"
+msgstr ""
+
+#: views/design-settings.php:91
+msgid "Right"
+msgstr ""
+
+#: views/design-settings.php:99
+msgid "Widget Distance"
+msgstr ""
+
+#: views/design-settings.php:128
+msgid "Widget Scroll Bar (PRO)"
+msgstr ""
+
+#: views/design-settings.php:137
+msgid "Powered-by Label (PRO)"
+msgstr ""
+
+#: views/design-settings.php:156
+msgid "Response Time Text"
+msgstr ""
+
+#: views/design-settings.php:168
+msgid "GDPR Notice"
+msgstr ""
+
+#: views/display-settings.php:5
+msgid "Time Symbols"
+msgstr ""
+
+#: views/display-settings.php:13
+msgid "Show on desktop"
+msgstr ""
+
+#: views/display-settings.php:22
+msgid "Show on mobile"
+msgstr ""
+
+#: views/display-settings.php:31
+msgid "Display on Pages"
+msgstr ""
+
+#: views/display-settings.php:34
+msgid "Show on all pages and posts"
+msgstr ""
+
+#: views/display-settings.php:35
+msgid "Show on these pages..."
+msgstr ""
+
+#: views/display-settings.php:36
+msgid "Hide on these pages..."
+msgstr ""
+
+#: views/display-settings.php:98
+msgid "Display on Posts (PRO)"
+msgstr ""
+
+#: views/floating-widget-settings.php:14
+msgid "Selected Accounts"
+msgstr ""
+
+#: views/floating-widget-settings.php:15
+msgid "Design"
+msgstr ""
+
+#: views/floating-widget-settings.php:16
+msgid "Display Settings"
+msgstr ""
+
+#: views/meta-accounts.php:9
+msgid "Account Number or group chat URL"
+msgstr ""
+
+#: views/meta-accounts.php:17
+msgid ""
+"Refer to <a href=\"https://faq.whatsapp.com/en/general/21016748\" "
+"target=\"_blank\">https://faq.whatsapp.com/en/general/21016748</a> for a "
+"detailed explanation."
+msgstr ""
+
+#: views/meta-accounts.php:31
+msgid "Predefined Text"
+msgstr ""
+
+#: views/meta-accounts.php:36
+msgid ""
+"Use [njwa_page_title] and [njwa_page_url] shortcodes to output the page's "
+"title and URL respectively."
+msgstr ""
+
+#: views/meta-accounts.php:42
+msgid "Always available online"
+msgstr ""
+
+#: views/meta-accounts.php:54
+msgid "Custom Availability (PRO)"
+msgstr ""
+
+#: views/meta-accounts.php:62
+#, php-format
+msgid ""
+"This feature is now only available in Pro version.<br>If you still want to "
+"use it, please <a href=\"%s\">Upgrade PRO</a> or turn back to <a "
+"href=\"%s\">Version 2.6</a><br>Need help? <a href=\"%s\" style=\"color: "
+"#444\">Contact us</a>"
+msgstr ""
+
+#: views/meta-accounts.php:95
+msgid "Apply to All Days"
+msgstr ""
+
+#: views/meta-accounts.php:106
+msgid "Description text when offline (PRO)"
+msgstr ""
+
+#: views/meta-accounts.php:109
+msgid ""
+"You can use shortcode [njwa_time_work] to display the exact time this "
+"account is back to work on a working day."
+msgstr ""
+
+#: views/meta-accounts.php:111
+msgid "You can use this text to display on days this account does not work."
+msgstr ""
+
+#: views/meta-button-style.php:4
+msgid "This styling applies only to the shortcode buttons for this account."
+msgstr ""
+
+#: views/meta-button-style.php:8
+msgid "Button Label"
+msgstr ""
+
+#: views/meta-button-style.php:12
+msgid ""
+"This text applies only on shortcode button. Leave empty to use the default "
+"label."
+msgstr ""
+
+#: views/meta-button-style.php:33
+msgid "Button Background Color"
+msgstr ""
+
+#: views/meta-button-style.php:39
+msgid "Button Text Color"
+msgstr ""
+
+#: views/selected-accounts.php:47 views/woocommerce-button.php:121
+msgid "Please select accounts you want them to display in WhatsApp Chat Widget"
+msgstr ""
+
+#: views/selected-accounts.php:49 views/woocommerce-button.php:123
+msgid "Selected Accounts:"
+msgstr ""
+
+#: views/settings.php:14
+msgid "WooCommerce Button"
+msgstr ""
+
+#: views/settings.php:15
+msgid "Analytics"
+msgstr ""
+
+#: views/settings.php:16
+msgid "WhatsApp URL"
+msgstr ""
+
+#: views/url-settings.php:1
+msgid "Choose how you want to redirect WhatsApp URL."
+msgstr ""
+
+#: views/url-settings.php:5
+msgid "Open in new tab"
+msgstr ""
+
+#: views/url-settings.php:14
+msgid "URL for Desktop"
+msgstr ""
+
+#: views/url-settings.php:28
+msgid "URL for Mobile"
+msgstr ""
+
+#: views/woocommerce-button.php:4
+msgid ""
+"Display WhatsApp click to chat button on WooCommerce single product pages."
+msgstr ""
+
+#: views/woocommerce-button.php:8
+msgid "Enabled"
+msgstr ""
+
+#: views/woocommerce-button.php:17
+msgid "Button position"
+msgstr ""
+
+#: views/woocommerce-button.php:26
+msgid "Before Add to Cart button"
+msgstr ""
+
+#: views/woocommerce-button.php:35
+msgid "After Add to Cart button"
+msgstr ""
+
+#: views/woocommerce-button.php:44
+msgid "After short description"
+msgstr ""
+
+#: views/woocommerce-button.php:53
+msgid "After long description"
+msgstr ""
+
+#: views/woocommerce-button.php:60
+msgid "Select accounts to display"
+msgstr ""
+
+#: views/woocommerce-button.php:66
+msgid "Third party integrations (PRO)"
+msgstr ""
+
+#: views/woocommerce-button.php:73
+msgid "Enable Dokan vendor button"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WP Chat App"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://ninjateam.org/wordpress-whatsapp-chat"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Integrate your WhatsApp experience directly into your website. This is one "
+"of the best way to connect and interact with your customer."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "NinjaTeam"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://ninjateam.org"
+msgstr ""

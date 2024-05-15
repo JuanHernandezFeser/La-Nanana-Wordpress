@@ -1,0 +1,89 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "title": "Purple",
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "slug": "primary",
+          "color": "#853CCF",
+          "name": "Primary"
+        },
+        {
+          "slug": "secondary",
+          "color": "#5602A9",
+          "name": "Secondary"
+        },
+        {
+          "slug": "light-shade",
+          "color": "#FAF7FD",
+          "name": "Light Shade"
+        },
+        {
+          "slug": "dark-shade",
+          "color": "#16012C",
+          "name": "Dark Shade"
+        },
+
+        {
+          "slug": "light-color",
+          "color": "#FFFFFF",
+          "name": "Light Color"
+        },
+        {
+          "slug": "dark-color",
+          "color": "#000000",
+          "name": "Dark Color"
+        },
+        {
+          "slug": "heading-color",
+          "color": "#262625",
+          "name": "Heading Color"
+        },
+        {
+          "slug": "foreground",
+          "color": "#6C6C6C",
+          "name": "Foreground"
+        },
+        {
+          "slug": "meta-color",
+          "color": "#C2C2C2",
+          "name": "Meta Color"
+        },
+        {
+          "slug": "border-color",
+          "color": "#ececf0",
+          "name": "Border Color"
+        },
+        {
+          "slug": "border-dark-color",
+          "color": "#1C0237",
+          "name": "Border Dark Color"
+        },
+        {
+          "slug": "star-color",
+          "color": "#F4B104",
+          "name": "Rating Star Color"
+        },
+        {
+          "color": "#ffffff00",
+          "name": "Transparent",
+          "slug": "transparent"
+        }
+      ],
+      "gradients": [
+        {
+          "gradient": "linear-gradient(135deg, var(--wp--preset--color--primary) 10%, var(--wp--preset--color--light-shade) 100%)",
+          "name": "Bottom Shade Color",
+          "slug": "bottom-gradient"
+        },
+        {
+          "gradient": "linear-gradient(135deg,var(--wp--preset--color--light-shade) 42%,rgba(242,247,247,0.85) 100%)",
+          "name": "Light Shade Gradient",
+          "slug": "light-shade-color"
+        }
+      ]
+    }
+  }
+}

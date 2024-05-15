@@ -1,0 +1,846 @@
+/**
+ * @version 2.0
+ * @package: Booking Calendar Responsive CSS
+ * @category: Front-End
+ * @author wpdevelop
+ *
+ * @web-site https://wpbookingcalendar.com/
+ * @email info@wpbookingcalendar.com
+ *
+ * @modified 2023-11-11
+ */
+
+/*******************************************************************************/
+/*  Calendar structure:                                                         */
+/*******************************************************************************/
+/* WIDTH: of calendar - its FULL width of Month(s) ROW (its NOT only one month)  */
+/*
+ .bk_calendar_frame.cal_month_num_1.months_num_in_row_1
+    .hasDatepick
+        .datepick-inline
+            .calendar-links
+            .datepick-one-month
+            .datepick-one-month , ...
+
+*/
+/* SIZE: Set width of calendar with several months */           /* FixIn: 9.7.3.4 */
+/* FixIn: Standard entire calendar WIDTH ============================================================================ */
+.wpbc_no_custom_width.bk_calendar_frame { width: 100%; min-width:201px; }
+.wpbc_no_custom_width.cal_month_num_1 {   max-width: 341px; }
+.wpbc_no_custom_width.cal_month_num_2 {   max-width: 682px; }
+.wpbc_no_custom_width.cal_month_num_3 {   max-width: 1023px; }
+.wpbc_no_custom_width.cal_month_num_4 {   max-width: 1364px; }
+.wpbc_no_custom_width.cal_month_num_5 {   max-width: 1705px; }
+.wpbc_no_custom_width.cal_month_num_6 {   max-width: 2046px; }
+.wpbc_no_custom_width.cal_month_num_7 {   max-width: 2387px; }
+.wpbc_no_custom_width.cal_month_num_8 {   max-width: 2728px; }
+.wpbc_no_custom_width.cal_month_num_9 {   max-width: 3069px; }
+.wpbc_no_custom_width.cal_month_num_10 {  max-width: 3410px; }
+.wpbc_no_custom_width.cal_month_num_11 {  max-width: 3751px; }
+.wpbc_no_custom_width.cal_month_num_12 {  max-width: 4092px; }
+/* FixIn: Override width, if defined number of Months in a ROW ====================================================== */
+.wpbc_no_custom_width.months_num_in_row_1 {  max-width: 341px;  }
+.wpbc_no_custom_width.months_num_in_row_2 {  max-width: 682px; }
+.wpbc_no_custom_width.months_num_in_row_3 {  max-width: 1023px; }
+.wpbc_no_custom_width.months_num_in_row_4 {  max-width: 1364px; }
+.wpbc_no_custom_width.months_num_in_row_5 {  max-width: 1705px; }
+.wpbc_no_custom_width.months_num_in_row_6 {  max-width: 2046px; }
+/* FixIn: 9.8.12.1  - Min. WIDTH of all parent calendar tags ======================================================== */
+    .booking_form_div,
+    .wpbc_booking_form_structure,
+    .wpbc_structure_calendar,
+    .wpbc_calendar_wraper,
+    .wpbc_no_custom_width.bk_calendar_frame {
+        /*min-width: 173px;*/
+        /*min-width: Min(244px, 100%);*/
+    }
+    .wpbc_calendar_wraper{
+        min-width: 341px;
+        min-width: Min(341px, 100%);
+    }
+/* FixIn: 9.8.3.1  - Min. WIDTH of calendar One Month, before Wrap to next ROW ====================================== */
+.bk_calendar_frame .datepick-inline,
+.bk_calendar_frame .datepick-one-month {
+    width: 100%;
+}
+.bk_calendar_frame .datepick-inline {
+    min-width: 173px;
+    min-width: Min(244px, 100%);
+}
+.bk_calendar_frame .datepick-one-month {
+    min-width: 169px;
+    min-width: Min(240px, 100%);
+}
+/* For small devices always set to full width screen */
+@media (max-width: 400px) {
+    .bk_calendar_frame .datepick-inline{
+        min-width: 100%;
+        min-width: Max(100%, 201px);
+    }
+    .bk_calendar_frame .datepick-one-month{
+        min-width: 100%;
+        min-width: Max(100%, 195px);
+    }
+}
+
+/* FixIn:   Your Customizations:   Min. width of One Month in Calendar, before it start Wrap to next ROW ============ */
+/*
+ Example of CSS for      280px:       previously  defined as:  Min(240px, 100%);
+
+ .bk_calendar_frame .datepick-inline {    min-width: Min(284px, 100%); }
+ .bk_calendar_frame .datepick-one-month { min-width: Min(280px, 100%); }
+
+*/
+
+/* FixIn: 9.8.4.1  -  container calendar font for small sections  =================================================== */
+/* @container(){...}:            Mini Calendar @container queries       - Change calendar font size, on very narrow sections
+
+@CONTAINER()
+
+    Example:    container:  wpbc_c__datepick-one-month / inline-size;
+
+    Docs:       container:  name / container-type;                      ->          https://www.w3.org/TR/css-contain-3/#container-type   ,  https://www.w3.org/TR/css-contain-3/#container-queries
+
+                    'inline-size' - inline-size - Refers to the physical width  (horizontal dimension) in horizontal modes, and to the physical height (vertical dimension)   in vertical modes.
+                    'size'        - block size  - Refers to the physical height (vertical dimension)   in horizontal modes, and to the physical width  (horizontal dimension) in vertical modes.
+                    'normal'      - default     - NOT_A_CONTAINER_SIZE_QUERIES, it is query container STYLE queries.
+
+CLAMP()
+
+    Calculator: https://www.marcbacon.com/tools/clamp-calculator/
+    Example:
+            From 85px - 140px of container. Fonts: 9px - 12px. CLAMP: https://www.marcbacon.com/tools/clamp-calculator/    vw == cqi ( https://www.w3.org/TR/css-contain-3/#container-lengths )
+            font-size: clamp(0.563rem, 0.273rem + 5.455cqi, 0.75rem);
+*/
+    .datepick-one-month {
+        container:  wpbc_c__datepick-one-month / inline-size;
+    }
+    /* For less than 140px of calendar month */
+    @container wpbc_c__datepick-one-month (inline-size < 140px) {
+        /* Month Table */
+        div.datepick-one-month table.datepick.wpbc_calendar *{
+            font-size: clamp(0.375rem, -0.205rem + 10.909cqi, 0.75rem);
+        }
+    }
+    .datepick-inline {
+        container:  wpbc_c__datepick-inline / inline-size;
+    }
+    /* For less than 140px of calendar month */
+    @container wpbc_c__datepick-inline (inline-size < 140px) {
+        /* Month Titles */
+        div.datepick-one-month .datepick-header{
+            /* From 85px - 140px of container. Fonts: 9px - 12px. CLAMP: https://www.marcbacon.com/tools/clamp-calculator/    vw == cqi ( https://www.w3.org/TR/css-contain-3/#container-lengths )  */
+            font-size: clamp(0.563rem, 0.273rem + 5.455cqi, 0.75rem);
+        }
+        /* Prior | Next Links */
+        .calendar-links * {
+            font-size: clamp(0.438rem, -0.045rem + 9.091cqi, 0.75rem);
+        }
+    }
+
+/* ================================================================================================================== */
+
+/* ROWS for Calendar Months :: ------------------- 1 to 12 months with combination of showing several months in a row */
+.bk_calendar_frame.months_num_in_row_1 .datepick-one-month,     /* Specific number of months in a row. Please check more in FAQ.*/
+.datepick-one-month {                                           /* General */
+  flex: 1 1 100%;
+}
+.bk_calendar_frame.months_num_in_row_2 .datepick-one-month,     /* Specific number of months in a row. Please check more in FAQ.*/
+.cal_month_num_2 .datepick-one-month {                          /* General */
+  flex: 1 1 50%;
+}
+.bk_calendar_frame.months_num_in_row_3 .datepick-one-month,     /* Specific number of months in a row. Please check more in FAQ.*/
+.cal_month_num_3 .datepick-one-month {                          /* General */
+  flex: 1 1 33.333333333333333%;
+}
+.bk_calendar_frame.months_num_in_row_4 .datepick-one-month,     /* Specific number of months in a row. Please check more in FAQ.*/
+.cal_month_num_4 .datepick-one-month {                          /* General */
+  flex: 1 1 25%;
+}
+.bk_calendar_frame.months_num_in_row_5 .datepick-one-month,     /* Specific number of months in a row. Please check more in FAQ.*/
+.cal_month_num_5 .datepick-one-month {                          /* General */
+  flex: 1 1 20%;
+}
+.bk_calendar_frame.months_num_in_row_6 .datepick-one-month,     /* Specific number of months in a row. Please check more in FAQ.*/
+.cal_month_num_6 .datepick-one-month {                          /* General */
+  flex: 1 1 16.6666666666666%;
+}
+.cal_month_num_7 .datepick-one-month {
+  flex: 1 1 14.28571429%;
+}
+.cal_month_num_8 .datepick-one-month {
+  flex: 1 1 12.5%;
+}
+.cal_month_num_9 .datepick-one-month {
+  flex: 1 1 11.11111111%;
+}
+.cal_month_num_10 .datepick-one-month {
+  flex: 1 1 10%;
+}
+.cal_month_num_11 .datepick-one-month {
+  flex: 1 1 9.0909090909090909%;
+}
+.cal_month_num_12 .datepick-one-month {
+  flex: 1 1 8.333333333333333%;
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+.bk_calendar_frame {                                                                                                    /* FixIn: 9.3.1.4   */
+	position: relative;
+}
+.datepick-inline {
+    width:100%;                                    /* Override the width of the calendar, which  is set datepicker JS */        /* FixIn: 9.7.3.4 */
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 1px;                                  /* Outer padding in calendar. */
+    z-index: 10000;
+}
+.datepick-inline .datepick-one-month {
+    padding: 2px;                                  /* Padding between months.    */
+    box-sizing: border-box;                                                                                             /*  FixIn: 9.6.1.6 */
+}
+/* HEIGHT: of    C E L L S   */
+.datepick-inline .datepick-title-row th,
+.datepick-inline .datepick-days-cell{
+    height: 48px;
+}
+    @media (max-width: 400px) {
+        div.datepick-inline table .datepick-title-row th,
+        div.datepick-inline table .datepick-days-cell{
+            height: 40px !important;
+        }
+    }
+    /* HEIGHT: of    C E L L S  in POPUP calendar */
+    #datepick-div.datepick-inline .datepick-title-row th,
+    #datepick-div.datepick-inline .datepick-days-cell{
+        height: 35px;
+    }
+
+/*******************************************************************************/
+/*  S T R U C T U R E    &    S i z e s ****************************************/
+/*******************************************************************************/
+/*RESET: Width, margin, padding */
+div.check-out-div, 
+div.check-in-div, 
+div.date-content-top, 
+div.date-content-bottom{
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;        
+}
+
+/* RESET: Font sizes, padding, margin */
+.datepick-inline .datepick,                                        /* Month table */
+.datepick-inline .datepick-header,                                 /* Month header */
+.datepick-inline .datepick-header span,                            /* Header span */
+.datepick-inline .calendar-links,                                  /* Prev Next months */
+.datepick-inline .calendar-links a,                                /* Prev Next links */
+.datepick-inline .datepick-days-cell,                              /* Date cell */
+.datepick-inline .datepick-days-cell a,                            /* Active date cell */
+.datepick-inline .datepick-days-cell div,                          /* Cehck in/out */
+.datepick-inline .datepick-title-row,                              /* Week row */
+.datepick-inline .datepick-title-row th {                          /* Week cell */    
+    padding: 0;
+    margin:  0;
+    font-size:12px;
+    border: 0 none;
+    vertical-align: baseline;    
+}
+.datepick-inline .datepick,                                        /* Month table */
+.datepick-inline .datepick-days-cell,                              /* Date cell */
+.datepick-inline .datepick-days-cell a,                            /* Active date cell */
+.datepick-inline .datepick-days-cell div,                          /* Cehck in/out */
+.datepick-inline .datepick-title-row,                              /* Week row */
+.datepick-inline .datepick-title-row th {                          /* Week cell */
+    line-height: 1.4;
+}
+#content .datepick-days-cell,                                       /* Reset the padding in TD and TH elements of calendar to prevent conflict  with  some WP themes */
+#content .datepick-title-row th{
+    padding: 0;
+    margin:  0;
+}
+/* RESET: width to 100% */
+.datepick-inline .datepick,
+.datepick-inline .datepick-header{
+    width:100%;
+}
+
+/* STRUCTURE: Previous & Next month links */                                                                            /* FixIn: 9.3.1.4   */
+.datepick-inline .calendar-links{
+	display:flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	width:100%;
+	height:40px;
+	margin-bottom: -40px;
+}
+.datepick-inline .calendar-links .datepick-prev,
+.datepick-inline .calendar-links .datepick-next {
+	flex: 1 1 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-end;
+	align-items: flex-start;
+    margin: 0 4px;
+	line-height: 2em;
+}
+.datepick-inline .calendar-links .datepick-next{
+    text-align: right;
+	align-items: flex-end
+}
+.datepick-inline .calendar-links .datepick-prev a,
+.datepick-inline .calendar-links .datepick-next a{
+	font-size: 2em;
+	line-height: 2px;
+	position:absolute;
+	z-index:9999;
+}
+.datepick-inline .datepick-header {
+	line-height: 40px;
+	padding: 0;
+}
+.datepick-inline .datepick-header span{
+	/*font-size: 1.15em;*/
+	/*line-height: 1.2em;*/
+    font-size: 15px;                /* FixIn: 9.8.12.1 */
+    line-height: 2em;
+}
+/* Week Titles height */
+div.datepick-inline .datepick-title-row th{
+    height: auto !important;
+    line-height: 2.18182;
+}
+/* Links: NO UNDERLINE, Cursor - Pointer */
+.datepick-inline .calendar-links .datepick-prev a,
+.datepick-inline .calendar-links .datepick-next a,
+.datepick-inline .calendar-links .datepick-prev a:hover,
+.datepick-inline .calendar-links .datepick-next a:hover,
+.datepick-inline .datepick-days-cell, 
+.datepick-inline .datepick-days-cell.timespartly.date_approved, 
+.datepick-inline .datepick-days-cell.timespartly.date2approve, 
+.datepick-inline .datepick-days-cell a, 
+.datepick-inline .datepick-days-cell a:hover,                                   /* FixIn: 5.4.5.9 */                            
+.block_hints .block_free a, 
+.block_hints .block_free a:hover, 
+.block_hints .block_time a, 
+.block_hints .block_time a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: none;                                                           /* FixIn: 5.4.5.9 */
+    outline: none;                                                              /* FixIn: 9.3.1.4   */
+    text-shadow: none;                                                          /* FixIn: 9.3.1.4   */
+}
+.datepick-inline .datepick-days-cell.datepick-unselectable,                     /* Default cursor for the unvailbale dates */
+.datepick-inline .datepick-days-cell.datepick-unselectable a, 
+.datepick-inline .datepick-days-cell.datepick-unselectable a:hover, 
+.datepick-inline .datepick-days-cell.date_approved,
+.datepick-inline .datepick-days-cell.date2approve{
+    cursor: default;
+}
+/* ALIGN: Header */
+.datepick-inline .datepick-header{
+    text-align: center;
+    position: relative;
+}
+/* ALIGN: Cells and set standard width */
+.datepick-inline .datepick-title-row th,
+.datepick-inline .datepick-days-cell{
+    text-align: center;
+    vertical-align: middle;
+    width: 14.28571429%;  
+    overflow: hidden;
+}
+.datepick-inline .datepick-days-cell a,
+.datepick-inline .datepick-days-cell span{                                      /* FixIn: 6.0.1.2 */
+    position:relative;
+    z-index: 99;
+}
+
+
+/*******************************************************************************/
+/*    Check In / Out Times      ************************************************/
+/*******************************************************************************/
+.block_hints .block_check_in_out.check_in_time,                                                 /* Item  for the LEGEND */
+.datepick-inline .timespartly.check_in_time,                                                    /* If we are using the Check in/out time, so hide the CLOCK icon */
+.datepick-inline .timespartly.check_out_time {
+    background-image: none;
+}
+/* Backgrounds */
+.block_hints .block_check_in_out.check_in_time div.check-in-div,                                /* Item  for the LEGEND */
+.block_hints .block_check_in_out.check_out_time div.check-out-div,                              /* Item  for the LEGEND */
+td.timespartly.check_in_time div.check-in-div,                                                  /* Define the check in/out time BACKGROUND */
+td.timespartly.check_out_time div.check-out-div {                                 
+    border: 0px none;
+    float: left;
+    height: 200%;
+    margin-bottom: -400%;
+    position: relative;
+    top: -50%;
+    vertical-align: bottom;
+    width: 20%;
+    z-index: 0;
+}
+/*FixIn: 7.0.1.19  Beta Feature not tested enough! Support: Chrome 36.0+, MS IE 10.0+, Firefox 16.0+, Safari 9.0+, Opera 23.0+ */
+.block_hints .block_check_in_out.check_in_time a,                               /* Item  for the LEGEND */
+.block_hints .block_check_in_out.check_out_time a,                              /* Item  for the LEGEND */
+td.timespartly.check_in_time a,                                                 /* Define the check in/out time BACKGROUND */
+td.timespartly.check_out_time a {
+    text-shadow:none;                                                     
+}
+.block_hints .block_check_in_out.check_in_time em {                             /* FixIn: 7.0.1.37 Correct positioning of text in legend */
+    position: relative;
+    font-style: normal;
+    text-shadow: none;
+}
+/* Shift days numbers to  the left | right for showing them in triangles */
+/*
+.block_hints .block_check_in_out.check_out_time a,
+td.timespartly.check_out_time a {
+    margin-left: -50%;
+}
+.block_hints .block_check_in_out.check_in_time a,  
+td.timespartly.check_in_time a{                    
+    margin-right: -50%;
+}*/
+.wpbc_change_over_triangle .block_hints .block_check_in_out.check_in_time div.check-in-div,                              /* Item  for the LEGEND */
+.wpbc_change_over_triangle td.timespartly.check_in_time div.check-in-div {                                /* Define the check in/out time BACKGRUND */
+    height: 300%;
+    margin-bottom: -400%;    
+    top: -50%;    
+    width: 100% !important;   
+    transform: rotate(45deg) translate(-100%,-10%)
+}
+.wpbc_change_over_triangle .block_hints .block_check_in_out.check_in_time div.check-in-div {
+    transform: rotate(45deg) translate(-85%,-10%)
+}
+.wpbc_change_over_triangle .block_hints .block_check_in_out.check_out_time div.check-out-div,                            /* Item  for the LEGEND */
+.wpbc_change_over_triangle td.timespartly.check_out_time div.check-out-div { 
+    height: 300%;
+    margin-bottom: -400%;    
+    top: -50%;    
+    width: 100% !important;   
+    transform: rotate(-135deg) translate(0,10%);
+}
+.wpbc_change_over_triangle2 .block_hints .block_check_in_out.check_in_time div.check-in-div,                              /* Item  for the LEGEND */
+.wpbc_change_over_triangle2 td.timespartly.check_in_time div.check-in-div {                                /* Define the check in/out time BACKGRUND */
+    height: 300%;
+    margin-bottom: -400%;    
+    top: -50%;    
+    width: 100% !important;   
+    transform: rotate(-45deg) translate(0,-10%);
+}
+.wpbc_change_over_triangle2 .block_hints .block_check_in_out.check_in_time div.check-in-div {
+    transform: rotate(-45deg) translate(-15%,-10%);
+}
+.wpbc_change_over_triangle2 .block_hints .block_check_in_out.check_out_time div.check-out-div,                            /* Item  for the LEGEND */
+.wpbc_change_over_triangle2 td.timespartly.check_out_time div.check-out-div { 
+    height: 300%;
+    margin-bottom: -400%;    
+    top: -50%;    
+    width: 100% !important;   
+    transform: rotate(135deg) translate(-100%,10%);
+}
+/*FixIn: 7.0.1.19 */
+.block_hints .block_check_in_out.check_out_time div.check-out-div,                          /* Item  for the LEGEND */
+td.timespartly.check_out_time div.check-out-div {                                           /* Define the check out position */
+    float: right;
+}
+
+td.timespartly.check_in_time.check_out_time div.check-in-div,                               /* If we are have Together the check  in and check  out times, so  this date is booked.*/
+td.timespartly.check_in_time.check_out_time div.check-out-div {
+    display: none;
+}
+
+/* HIDE check  in/out elements, when: CELL OVER | DATE SELECTED | CHECK IN Date Selected */
+/*.datepick-inline .datepick .datepick-unselectable.check_in_time div.check-in-div,
+.datepick-inline .datepick .datepick-unselectable.check_out_time div.check-out-div,*/       /*FixIn: 7.0.1.19 */
+.datepick-inline .datepick .datepick-days-cell-over.check_in_time div.check-in-div,
+.datepick-inline .datepick .datepick-days-cell-over.check_out_time div.check-out-div,
+.datepick-inline .datepick .datepick-current-day.check_in_time div.check-in-div,
+.datepick-inline .datepick .datepick-current-day.check_out_time div.check-out-div{
+    display: none;
+    visibility: hidden;
+}
+/* Check In Pending & Check Out Approved ||  Check Out Pending & Check In Approved || dates     //FixIn: 6.0.1.2   */ 
+td.timespartly.check_in_time.check_out_time.check_in_time_date_approved.check_out_time_date2approve div.check-in-div, 
+td.timespartly.check_in_time.check_out_time.check_out_time_date_approved.check_in_time_date2approve div.check-out-div, 
+td.timespartly.check_in_time.check_out_time.check_in_time_date2approve.check_out_time_date_approved div.check-in-div, 
+td.timespartly.check_in_time.check_out_time.check_out_time_date2approve.check_in_time_date_approved div.check-out-div {    
+    display: block;
+    visibility: visible;
+    width: 50%;
+    float: left;    
+}
+td.timespartly.check_in_time.check_out_time.check_out_time_date_approved.check_in_time_date2approve div.check-out-div, 
+td.timespartly.check_in_time.check_out_time.check_out_time_date2approve.check_in_time_date_approved div.check-out-div {    
+    float: right;
+}
+td.timespartly.check_in_time.check_out_time.check_in_time_date_approved.check_out_time_date2approve span, 
+td.timespartly.check_in_time.check_out_time.check_out_time_date_approved.check_in_time_date2approve span,    
+td.timespartly.check_in_time.check_out_time.check_in_time_date_approved.check_out_time_date2approve div, 
+td.timespartly.check_in_time.check_out_time.check_out_time_date_approved.check_in_time_date2approve div {   
+    cursor: default;
+}
+
+/*******************************************************************************/
+/* Set correct FONT of unselectable elements, when the check in date is selected */
+/*******************************************************************************/
+.datepick-inline .datepick .datepick-unselectable.check_in_time.date_approved,  
+.datepick-inline .datepick .datepick-unselectable.check_out_time.date_approved, 
+.datepick-inline .datepick .datepick-unselectable.check_in_time.date2approve,
+.datepick-inline .datepick .datepick-unselectable.check_out_time.date2approve {
+/*    background-color: transparent;*/                                          /*FixIn: 7.0.1.19 */
+/*    font-weight: 400;*/                                                       /*FixIn: 9.5.0.2 */
+}
+
+/*******************************************************************************/
+/*     W I D G E T            **************************************************/
+/*******************************************************************************/
+/* Set HEIGHT of the CELLs in the Widget */
+.widget_wpdev_booking .hasDatepick .datepick-inline .datepick-title-row th,
+.widget_wpdev_booking .hasDatepick .datepick-inline .datepick-days-cell{
+    height: 48px;
+}
+/* Set calendar WIDTH and MARGIN in Widget */
+.widget_wpdev_booking .bk_calendar_frame{
+    margin: 0 2%;
+    width: 96% !important;
+    max-width: 96% !important;                                              /* //FixIn: 9.6.2.1  */
+    min-width: 96% !important;
+}
+/* LEGEND items show in 2 rows in Widget */
+.widget_wpdev_booking .wpdev_hint_with_text{
+    float: left;
+    margin: 0;
+    width: 50% !important;
+}
+/* Set the WIDTH and MARGIN of the form FIELDS in Widget */
+.widget_wpdev_booking input,
+.widget_wpdev_booking select,
+.widget_wpdev_booking textarea,
+.widget_wpdev_booking .wpdevelop input,
+.widget_wpdev_booking .wpdevelop select,
+.widget_wpdev_booking .wpdevelop textarea,
+div#datepick-div input,
+div#datepick-div select,
+div#datepick-div textarea {
+    width: 96%;
+    margin: auto;
+}
+/* SELECT BUTTON and CHECKBOX fields have the Auto Width in Widget */
+/*.widget_wpdev_booking select,*/
+.widget_wpdev_booking input[type=button],
+.widget_wpdev_booking input[type=checkbox]{
+    width:auto;
+}
+
+/*******************************************************************************/
+/* Legend of days, which is shown under calendar *******************************/
+/*******************************************************************************/
+/* Full Legend Frame */
+.block_hints {
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:flex-start;
+    align-items:flex-start;
+}
+/* Date CELL with TEXT description */
+.block_hints .wpdev_hint_with_text {
+    flex: 0 0 auto;
+
+    display:flex;
+    flex-flow:row nowrap;                   /* FixIn: 9.5.0.3  */
+    justify-content:flex-start;
+    align-items:center;
+    max-width: 100%;                        /* FixIn: 9.5.0.3  */
+    margin:10px 15px 5px 0;
+}
+/* Vertical orientation of Legend items */
+.block_hints_vertical.block_hints .wpdev_hint_with_text {
+    flex: 0 0 100%;
+}
+/* Legend cell boxes and text */
+.block_hints .wpdev_hint_with_text > * {
+    flex: 0 1 auto;
+}
+/* Text Labels of Legend */
+.block_hints .wpdev_hint_with_text .block_text {
+    margin-left:5px;
+}
+/* Dates CELL of Legend */
+.block_check_in_out,
+.block_pending,
+.block_time,
+.block_booked,
+.block_free {
+    /*float: left;*/
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    border: 1px solid #FEA;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+}
+/* Font size for the TEXT in CELLa of Legend */
+.block_pending a,
+.block_time a,
+.block_booked a,
+.block_free a,
+.block_pending,
+.block_time,
+.block_booked,
+.block_free ,
+.wpdev_hint_with_text .block_check_in_out {
+    font-size: 13px;
+    font-weight: 400;
+}
+/* Clear Line */
+.wpdev_clear_hint{ 
+    height:1px; 
+    width:100%;
+    clear:both; 
+}
+/* Day Rates. Additional info at  the top  and bottom  of the day cell. */
+.datepick-inline .datepick-days-cell div.date-content-bottom,
+.datepick-inline .datepick-days-cell div.date-content-top {
+    font-size:0.7em;
+    font-style: italic;
+    line-height: 0.72em;
+    text-align: center;
+    padding:0;
+    width:100%;
+    text-shadow:none;
+    position: relative;
+}
+/*******************************************************************************/
+/* Responsive Design For Mobile Devices ****************************************/
+/*******************************************************************************/
+@media (max-width: 782px) {
+    div.bk_calendar_frame:not(.cal_month_num_1) { /* Define the width of calendar to the 100% of the device screen*/ /* //FixIn: 9.6.2.1  */
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+@media (max-width: 400px) {
+    div.bk_calendar_frame.cal_month_num_1 {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .datepick-inline .datepick-one-month { /* Show Only 1 month in a row */
+        width:100%;
+    }
+}
+@media (max-width: 782px) {
+    .booking_form_div input[type="text"],
+    .booking_form_div select,
+    .booking_form_div textarea {
+        width: 100% !important;
+        min-width: 100% !important;
+    }
+}
+
+/*******************************************************************************/
+/*     T I M E   S L O T S        AS       D.O.T.S         //FixIn: 8.9.4.13   */
+/*******************************************************************************/
+.datepick-inline .datepick-days-cell .date-cell-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+}
+.datepick-inline .datepick-days-cell .date-cell-content .date-content-top,
+.datepick-inline .datepick-days-cell .date-cell-content .date-content-bottom {
+    flex: 1 1 35%;
+    line-height: normal;
+}
+.datepick-inline .datepick-days-cell .date-cell-content a {
+    flex: 1 1 30%;
+}
+.datepick-inline .timespartly .date-content-top{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    overflow: hidden;
+}
+.datepick-inline .timespartly .date-content-top .wpbc_time_dots{
+    flex: 1 1 1px;
+    font-size: 20px;
+
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100%;
+}
+/*******************************************************************************/
+/*  CHECK IN / OUT      as          P.O.L.Y.G.O.N.S        //FixIn: 8.9.4.13   */
+/*******************************************************************************/
+/* Table Day Cell div boundary element */
+.datepick-inline td.datepick-days-cell .wpbc-cell-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.wpbc-cell-box .wpbc-diagonal-el {
+    display: none;                      /* Do not visible by  default ! */
+    position:absolute;                  /* Important to  have parent element with       "position: relative;"     !!! */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.wpbc-cell-box .wpbc-diagonal-el svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Show Vertical Lines */
+.wpbc-cell-box .wpbc-diagonal-el svg polygon:nth-child(1){
+    display: none;
+}
+.wpbc-cell-box .wpbc-diagonal-el svg polygon:nth-child(2){
+    display: block;
+}
+/* Show Diagonal Lines */
+.wpbc_change_over_triangle .wpbc-cell-box .wpbc-diagonal-el svg polygon:nth-child(1){
+    display: block;
+}
+.wpbc_change_over_triangle .wpbc-cell-box .wpbc-diagonal-el svg polygon:nth-child(2){
+    display: none;
+}
+/* *** Fill diagonal COLOR for   check in/out items   in calendar skins:    .wpbc-cell-box .wpbc-diagonal-el svg polygon{...}  */
+/* Show CO item only when we are have check  in / out  */
+.datepick-inline td.datepick-days-cell.check_in_time  .wpbc-cell-box .wpbc-diagonal-el,
+.datepick-inline td.datepick-days-cell.check_out_time .wpbc-cell-box .wpbc-diagonal-el {
+    display: block;
+}
+/* Hide Times DOTs, when we are have "check  in / out" Activated  */
+.datepick-inline td.datepick-days-cell.check_in_time  .wpbc-cell-box .date-content-top,
+.datepick-inline td.datepick-days-cell.check_out_time .wpbc-cell-box .date-content-top {
+    visibility: hidden;
+}
+/*  When "C e l l   O V E R"  -- hide diagonal   */
+.datepick-inline .datepick td.datepick-days-cell.datepick-days-cell-over  .wpbc-cell-box .wpbc-diagonal-el{
+    display: none;
+}
+/* S E L E C T E D   Dates */
+.datepick-inline .datepick-one-month .datepick td.datepick-days-cell.datepick-current-day  .wpbc-cell-box .wpbc-diagonal-el{
+    display: none;
+}
+.check-in-div, .check-out-div {
+    display: none !important;
+}
+/**                                                                                                                     // FixIn:9.3.1.8
+* Fix border width  issue in Chrome browser
+* https://stackoverflow.com/questions/71674803/html-tables-has-a-weird-bold-horizontal-line-due-to-border-collapse-property/71703247#71703247
+*/
+div.datepick-inline table.datepick {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Chrome, Safari, AND NOW ALSO the Edge Browser and Firefox - it's for mobile devices: */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    div.datepick-inline table.datepick,
+    div.datepick-inline table.datepick th,
+    div.datepick-inline table.datepick td {
+         border-width: 0.69px;
+    }
+}
+/* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+    div.datepick-inline table.datepick,
+    div.datepick-inline table.datepick th,
+    div.datepick-inline table.datepick td {
+         border-width: 0.01px;
+    }
+}
+/* iOS */
+@supports (-webkit-touch-callout: none) {
+    div.datepick-inline table.datepick,
+    div.datepick-inline table.datepick th,
+    div.datepick-inline table.datepick td {
+         border-width: 0.68px;
+    }
+}
+/* Chrome 22-28 *
+@media screen and(-webkit-min-device-pixel-ratio:0) {
+  div.datepick-inline table.datepick {-chrome-:only(;
+     border-width: 0.01px;
+  );}
+  div.datepick-inline table.datepick th {-chrome-:only(;
+     border-width: 0.01px;
+  );}
+  div.datepick-inline table.datepick td {-chrome-:only(;
+     border-width: 0.01px;
+  );}
+}
+*/
+
+
+/* ================================================================================================================== */
+/* Tooltips Content for calendar  *********************************************************************************** */
+/* ================================================================================================================== */
+
+/*  T o o l t i p  :: General Structure */
+.wpbc_tooltip_section.tooltip__times ,
+.wpbc_tooltip_section {
+    border-top:1px solid #eee;
+    margin: 7px 0 0;
+    padding: 5px 0 0;
+    font-size: 12px;
+}
+.wpbc_tooltip_section:first-child{
+    border:none;
+    margin-top:1px;
+}
+/* Description Word */
+.wpbc_tooltip_section .wpbc_tooltip_title{
+    font-weight: 600;
+}
+/* Container of resource(s) */
+.wpbc_tooltip_section .wpbc_tooltip_resource_container{
+}
+/* Resource Name */
+.wpbc_tooltip_section .wpbc_tooltip_resource_container .wpbc_tooltip_header.tooltip_items_count_2,
+.wpbc_tooltip_section .wpbc_tooltip_resource_container .wpbc_tooltip_header{
+    font-weight: 600;
+}
+/* Option Value */
+.wpbc_tooltip_section .wpbc_tooltip_resource_container .wpbc_tooltip_item{
+    font-size:0.9em;
+}
+/*  T o o l t i p  :: Details */
+.tooltip__booking_details.wpbc_tooltip_section .wpbc_tooltip_resource_container .wpbc_tooltip_item{
+    margin-left:20px;
+}
+.tooltip__booking_details.wpbc_tooltip_section .wpbc_tooltip_resource_container .wpbc_tooltip_item.tooltip_booked_time {
+    font-weight: 600;
+    font-size:0.85em;
+}
+/*  T o o l t i p  :: Cost  --  show in 1 row for  */
+.tooltip__day_cost.wpbc_tooltip_section .wpbc_tooltip_title,
+.tooltip__day_cost.wpbc_tooltip_section .wpbc_tooltip_resource_container,
+.tooltip__day_cost.wpbc_tooltip_section .wpbc_tooltip_resource_container .wpbc_tooltip_item {
+    display: inline;
+}
+/*  T o o l t i p  :: Availability  --  show in 1 row */
+.tooltip__availability.wpbc_tooltip_section .wpbc_tooltip_title,
+.tooltip__availability.wpbc_tooltip_section .wpbc_tooltip_resource_container,
+.tooltip__availability.wpbc_tooltip_section .wpbc_tooltip_resource_container .wpbc_tooltip_item {
+    display:inline;
+}
+/* ================================================================================================================== */
+/* End Tooltips Content ********************************************************************************************* */
+/* ================================================================================================================== */
